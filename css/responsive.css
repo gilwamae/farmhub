@@ -1,0 +1,670 @@
+/* =========================================================
+   FARMHUB RESPONSIVE STYLES
+   File: responsive.css
+
+   Purpose:
+   Responsive behavior for tablets, mobile devices
+   and smaller screens.
+   ========================================================= */
+
+
+/* =========================================================
+   1. LARGE TABLETS
+   Below 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-menu {
+
+        gap: 22px;
+
+        margin-right: 20px;
+
+    }
+
+
+    .nav-link {
+
+        font-size: 13px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1.3fr
+            1fr
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   2. TABLETS
+   Below 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       Hide desktop navigation
+       ----------------------------------------------------- */
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 10px 0;
+
+        background-color: var(--white);
+
+        border-top: 1px solid var(--border-color);
+
+        box-shadow: var(--shadow-lg);
+
+    }
+
+
+    /* -----------------------------------------------------
+       Open navigation
+       ----------------------------------------------------- */
+
+    .nav-menu.active {
+
+        display: flex;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Mobile Navigation Links
+       ----------------------------------------------------- */
+
+    .nav-link {
+
+        display: flex;
+
+        align-items: center;
+
+        height: auto;
+
+        min-height: 50px;
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-link:hover {
+
+        background-color: var(--background-light);
+
+    }
+
+
+    .nav-link.active {
+
+        background-color: var(--primary-light);
+
+    }
+
+
+    .nav-link.active::after {
+
+        display: none;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Navigation Actions
+       ----------------------------------------------------- */
+
+    .nav-actions {
+
+        margin-left: auto;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Show Mobile Menu
+       ----------------------------------------------------- */
+
+    .menu-toggle {
+
+        display: flex;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Footer
+       ----------------------------------------------------- */
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px;
+
+    }
+
+}
+
+
+/* =========================================================
+   3. MOBILE
+   Below 768px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* -----------------------------------------------------
+       Container
+       ----------------------------------------------------- */
+
+    .container {
+
+        width: min(
+            100% - 30px,
+            var(--container-width)
+        );
+
+    }
+
+
+    /* -----------------------------------------------------
+       Header
+       ----------------------------------------------------- */
+
+    .site-header {
+
+        min-height: 68px;
+
+    }
+
+
+    .navbar {
+
+        min-height: 68px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Navigation Actions
+       ----------------------------------------------------- */
+
+    .nav-actions {
+
+        display: none;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Cart
+       ----------------------------------------------------- */
+
+    .cart-button {
+
+        margin-left: auto;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Logo
+       ----------------------------------------------------- */
+
+    .logo {
+
+        font-size: 23px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Sections
+       ----------------------------------------------------- */
+
+    .section {
+
+        padding: 60px 0;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Footer
+       ----------------------------------------------------- */
+
+    .footer-main {
+
+        padding: 55px 0 35px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+
+/* =========================================================
+   4. SMALL MOBILE
+   Below 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        width: min(
+            100% - 24px,
+            var(--container-width)
+        );
+
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+
+    }
+
+
+    .cart-button {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .menu-toggle {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+}
+/* =========================================================
+   HOMEPAGE RESPONSIVE STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       Hero
+       ----------------------------------------------------- */
+
+    .hero-content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero-text {
+
+        padding: 65px 0 35px;
+
+    }
+
+
+    .hero-image {
+
+        min-height: 430px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Categories
+       ----------------------------------------------------- */
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* -----------------------------------------------------
+       Why FarmHub
+       ----------------------------------------------------- */
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Products
+       ----------------------------------------------------- */
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* -----------------------------------------------------
+       Process
+       ----------------------------------------------------- */
+
+    .process-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* -----------------------------------------------------
+       Training
+       ----------------------------------------------------- */
+
+    .training-wrapper {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .training-image {
+
+        min-height: 350px;
+
+    }
+
+
+    .training-content {
+
+        padding: 45px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+       ----------------------------------------------------- */
+
+    .cta-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* -----------------------------------------------------
+       Hero
+       ----------------------------------------------------- */
+
+    .hero h1 {
+
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+
+    }
+
+
+    .hero-text > p {
+
+        font-size: 15px;
+
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-actions .btn {
+
+        width: 100%;
+
+    }
+
+
+    .hero-features {
+
+        gap: 12px;
+
+    }
+
+
+    .hero-image {
+
+        min-height: 350px;
+
+    }
+
+
+    .hero-card {
+
+        right: 18px;
+
+        bottom: 18px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Categories
+       ----------------------------------------------------- */
+
+    .category-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .category-image {
+
+        height: 220px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Trust Cards
+       ----------------------------------------------------- */
+
+    .trust-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Products
+       ----------------------------------------------------- */
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-image {
+
+        height: 240px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Process
+       ----------------------------------------------------- */
+
+    .process-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* -----------------------------------------------------
+       Training
+       ----------------------------------------------------- */
+
+    .training-content {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .training-content h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+       ----------------------------------------------------- */
+
+    .cta-section {
+
+        padding: 45px 0;
+
+    }
+
+
+    .cta-content h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .cta-actions {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .cta-actions .btn {
+
+        width: 100%;
+
+    }
+    .mobile-cart {
+
+    display: inline-flex;
+
+}
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .hero-features {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+}
