@@ -17,7 +17,7 @@
 
 
 /* =========================================================
-   1. HERO
+   1. HERO SECTION
    ========================================================= */
 
 .hero {
@@ -26,87 +26,138 @@
 
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            90deg,
-            #f5f8f1 0%,
-            #f5f8f1 48%,
-            #e9f0e4 100%
-        );
+    min-height: 590px;
+
+    background-color: #f4f7ef;
 
 }
 
 
-/* ---------------------------------------------------------
-   Hero Layout
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO BACKGROUND
+   ========================================================= */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(47, 125, 50, 0.08),
+            transparent 30%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .hero-content {
+
+    position: relative;
+
+    z-index: 2;
 
     display: grid;
 
     grid-template-columns:
-        0.95fr
-        1.05fr;
+        0.92fr
+        1.08fr;
 
     align-items: center;
 
-    min-height: 560px;
+    min-height: 590px;
 
 }
 
 
-/* ---------------------------------------------------------
-   Hero Text
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
 
 .hero-text {
 
     position: relative;
 
-    z-index: 2;
+    z-index: 3;
 
     padding: 70px 0;
 
 }
 
 
+/* =========================================================
+   HERO LABEL
+   ========================================================= */
+
 .hero-label {
 
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
 
     margin-bottom: 18px;
 
     color: var(--primary-color);
 
-    font-size: var(--text-sm);
+    font-size: 11px;
 
     font-weight: var(--weight-bold);
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
 
 }
 
 
 /* ---------------------------------------------------------
-   Hero Heading
+   Label Dot
    --------------------------------------------------------- */
+
+.hero-label-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    background-color: var(--secondary-color);
+
+    border-radius: var(--radius-full);
+
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
 
 .hero h1 {
 
-    max-width: 650px;
+    max-width: 590px;
 
     margin-bottom: 22px;
 
+    color: var(--text-primary);
+
     font-size: clamp(
-        40px,
+        42px,
         5vw,
-        62px
+        64px
     );
+
+    font-weight: var(--weight-bold);
 
     line-height: 1.08;
 
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
 
 }
 
@@ -120,28 +171,28 @@
 }
 
 
-/* ---------------------------------------------------------
-   Hero Description
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
 
-.hero-text > p {
+.hero-description {
 
-    max-width: 560px;
+    max-width: 535px;
 
     margin-bottom: 30px;
 
     color: var(--text-secondary);
 
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.8;
 
 }
 
 
-/* ---------------------------------------------------------
-   Hero Actions
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
 
 .hero-actions {
 
@@ -156,9 +207,41 @@
 }
 
 
+/* =========================================================
+   HERO PRIMARY BUTTON
+   ========================================================= */
+
+.hero-actions .btn-primary {
+
+    gap: 10px;
+
+}
+
+
 /* ---------------------------------------------------------
-   Hero Trust Features
+   Button Arrow
    --------------------------------------------------------- */
+
+.btn-arrow {
+
+    font-size: 17px;
+
+    transition:
+        transform var(--transition-fast);
+
+}
+
+
+.btn-primary:hover .btn-arrow {
+
+    transform: translateX(3px);
+
+}
+
+
+/* =========================================================
+   HERO FEATURES
+   ========================================================= */
 
 .hero-features {
 
@@ -166,7 +249,9 @@
 
     flex-wrap: wrap;
 
-    gap: 24px;
+    align-items: center;
+
+    gap: 25px;
 
 }
 
@@ -181,16 +266,16 @@
 
     color: var(--text-secondary);
 
-    font-size: var(--text-xs);
+    font-size: 11px;
 
     font-weight: var(--weight-semibold);
 
 }
 
 
-/* ---------------------------------------------------------
-   Hero Feature Icon
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO FEATURE ICON
+   ========================================================= */
 
 .feature-icon {
 
@@ -200,26 +285,42 @@
 
     justify-content: center;
 
-    width: 25px;
+    width: 28px;
 
-    height: 25px;
+    height: 28px;
 
-    color: var(--white);
+    flex-shrink: 0;
 
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+
+    background-color: var(--white);
+
+    border: 1px solid rgba(
+        47,
+        125,
+        50,
+        0.12
+    );
 
     border-radius: var(--radius-full);
 
-    font-size: 12px;
-
-    font-weight: var(--weight-bold);
+    box-shadow: var(--shadow-sm);
 
 }
 
 
-/* ---------------------------------------------------------
-   Hero Image
-   --------------------------------------------------------- */
+.feature-icon svg {
+
+    width: 14px;
+
+    height: 14px;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .hero-image {
 
@@ -227,30 +328,48 @@
 
     align-self: stretch;
 
-    min-height: 560px;
+    min-height: 590px;
+
+    overflow: hidden;
 
 }
 
 
-.hero-image::after {
+/* ---------------------------------------------------------
+   Image Shape
+   --------------------------------------------------------- */
+
+.hero-image::before {
 
     content: "";
 
     position: absolute;
 
-    inset: 0;
+    z-index: 1;
+
+    top: 0;
+
+    left: -1px;
+
+    width: 100px;
+
+    height: 100%;
 
     background:
         linear-gradient(
             90deg,
-            rgba(245, 248, 241, 0.15),
-            transparent 35%
+            #f4f7ef,
+            transparent
         );
 
     pointer-events: none;
 
 }
 
+
+/* ---------------------------------------------------------
+   Image
+   --------------------------------------------------------- */
 
 .hero-image img {
 
@@ -263,17 +382,123 @@
 }
 
 
-/* ---------------------------------------------------------
-   Hero Floating Card
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO QUALITY CARD
+   ========================================================= */
 
-.hero-card {
+.hero-quality-card {
 
     position: absolute;
 
-    right: 35px;
+    z-index: 4;
+
+    left: 30px;
 
     bottom: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 205px;
+
+    padding: 15px 18px;
+
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.8
+    );
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+/* ---------------------------------------------------------
+   Quality Icon
+   --------------------------------------------------------- */
+
+.quality-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    color: var(--white);
+
+    background-color: var(--primary-color);
+
+    border-radius: var(--radius-full);
+
+    font-size: 15px;
+
+    font-weight: var(--weight-bold);
+
+}
+
+
+/* ---------------------------------------------------------
+   Quality Text
+   --------------------------------------------------------- */
+
+.hero-quality-card strong {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--text-primary);
+
+    font-size: 12px;
+
+}
+
+
+.hero-quality-card span {
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   HERO STAT CARD
+   ========================================================= */
+
+.hero-stat-card {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 70px;
+
+    right: 30px;
 
     display: flex;
 
@@ -281,16 +506,9 @@
 
     gap: 3px;
 
-    min-width: 190px;
+    padding: 16px 20px;
 
-    padding: 18px 20px;
-
-    background-color: rgba(
-        255,
-        255,
-        255,
-        0.94
-    );
+    background-color: var(--primary-color);
 
     border-radius: var(--radius-lg);
 
@@ -299,25 +517,29 @@
 }
 
 
-.hero-card strong {
+.hero-stat-card strong {
 
-    color: var(--primary-color);
+    color: var(--white);
 
     font-family: var(--font-heading);
 
-    font-size: 15px;
+    font-size: 14px;
 
 }
 
 
-.hero-card span {
+.hero-stat-card span {
 
-    color: var(--text-secondary);
+    color: rgba(
+        255,
+        255,
+        255,
+        0.75
+    );
 
-    font-size: 12px;
+    font-size: 10px;
 
 }
-
 
 /* =========================================================
    2. SECTION HEADINGS

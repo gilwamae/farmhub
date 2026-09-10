@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         DOCUMENT INFORMATION
+         ===================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Shop fresh farm products from trusted FarmHub farmers."
+    >
+
+    <title>
+        Products | FarmHub
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+
+    <!-- =====================================================
+         PRODUCTS PAGE STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/products.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- Logo -->
+
+                <a
+                    href="../index.html"
+                    class="logo"
+                    aria-label="FarmHub Home"
+                >
+                    Farm<span>Hub</span>
+                </a>
+
+
+                <!-- Navigation -->
+
+                <div
+                    class="nav-menu"
+                    id="navMenu"
+                >
+
+                    <a
+                        href="../index.html"
+                        class="nav-link"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        href="products.html"
+                        class="nav-link active"
+                    >
+                        Products
+                    </a>
+
+                    <a
+                        href="farmers.html"
+                        class="nav-link"
+                    >
+                        Farmers
+                    </a>
+
+                    <a
+                        href="about.html"
+                        class="nav-link"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="training.html"
+                        class="nav-link"
+                    >
+                        Training
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="nav-link"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     NAVIGATION ACTIONS
+                     ================================================= -->
+
+                <div class="nav-actions">
+
+                    <a
+                        href="cart.html"
+                        class="cart-button"
+                        aria-label="Shopping cart"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+
+                            <circle
+                                cx="9"
+                                cy="20"
+                                r="1"
+                            />
+
+                            <circle
+                                cx="19"
+                                cy="20"
+                                r="1"
+                            />
+
+                            <path
+                                d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L22 8H6"
+                            />
+
+                        </svg>
+
+                        <span class="cart-count">
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="login.html"
+                        class="btn btn-outline"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="register.html"
+                        class="btn btn-primary"
+                    >
+                        Get Started
+                    </a>
+
+                </div>
+
+
+                <!-- Mobile Cart -->
+
+                <a
+                    href="cart.html"
+                    class="cart-button mobile-cart"
+                    aria-label="Shopping cart"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    >
+
+                        <circle
+                            cx="9"
+                            cy="20"
+                            r="1"
+                        />
+
+                        <circle
+                            cx="19"
+                            cy="20"
+                            r="1"
+                        />
+
+                        <path
+                            d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L22 8H6"
+                        />
+
+                    </svg>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    type="button"
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navMenu"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             PRODUCTS HERO
+             ================================================= -->
+
+        <section class="products-hero">
+
+            <div class="container">
+
+                <div class="products-hero-content">
+
+                    <span class="section-label">
+                        FARM MARKETPLACE
+                    </span>
+
+                    <h1>
+                        Fresh products from
+                        <span>trusted farms.</span>
+                    </h1>
+
+                    <p>
+                        Explore fresh farm products from farmers
+                        who are part of the FarmHub community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PRODUCTS SECTION
+             ================================================= -->
+
+        <section class="products-section">
+
+            <div class="container">
+
+
+                <!-- =================================================
+                     SEARCH + SORT
+                     ================================================= -->
+
+                <div class="products-toolbar">
+
+
+                    <!-- Search -->
+
+                    <div class="product-search">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <circle
+                                cx="11"
+                                cy="11"
+                                r="7"
+                            />
+
+                            <path
+                                d="m20 20-4-4"
+                            />
+
+                        </svg>
+
+
+                        <input
+                            type="search"
+                            id="productSearch"
+                            placeholder="Search products..."
+                            aria-label="Search products"
+                        >
+
+                    </div>
+
+
+                    <!-- Sort -->
+
+                    <div class="product-sort">
+
+                        <label for="sortProducts">
+                            Sort by
+                        </label>
+
+                        <select id="sortProducts">
+
+                            <option value="default">
+                                Popular
+                            </option>
+
+                            <option value="price-low">
+                                Price: Low to High
+                            </option>
+
+                            <option value="price-high">
+                                Price: High to Low
+                            </option>
+
+                            <option value="name">
+                                Name
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CATEGORY FILTERS
+                     ================================================= -->
+
+                <div
+                    class="category-filters"
+                    id="categoryFilters"
+                >
+
+                    <button
+                        type="button"
+                        class="category-filter active"
+                        data-category="all"
+                    >
+                        All Products
+                    </button>
+
+                    <button
+                        type="button"
+                        class="category-filter"
+                        data-category="milk"
+                    >
+                        Milk
+                    </button>
+
+                    <button
+                        type="button"
+                        class="category-filter"
+                        data-category="cheese"
+                    >
+                        Cheese
+                    </button>
+
+                    <button
+                        type="button"
+                        class="category-filter"
+                        data-category="meat"
+                    >
+                        Meat
+                    </button>
+
+                    <button
+                        type="button"
+                        class="category-filter"
+                        data-category="eggs"
+                    >
+                        Eggs
+                    </button>
+
+                    <button
+                        type="button"
+                        class="category-filter"
+                        data-category="honey"
+                    >
+                        Honey
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     PRODUCT HEADER
+                     ================================================= -->
+
+                <div class="products-header">
+
+                    <!--
+                        FUTURE SQL DATA:
+
+                        The product count will eventually come
+                        from the database.
+
+                        Example:
+
+                        SELECT COUNT(*) FROM products;
+
+                        PHP will then output the result here.
+                    -->
+
+                    <p id="productCount">
+                        8 products available
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     PRODUCT GRID
+                     ================================================= -->
+
+                <div
+                    class="products-grid"
+                    id="productsGrid"
+                >
+
+
+                    <!-- =================================================
+                         PRODUCT 1
+                         ================================================= -->
+
+                    <article
+                        class="shop-product-card"
+                        data-category="milk"
+                        data-name="Fresh Whole Milk"
+                        data-price="120"
+                    >
+
+                        <div class="shop-product-image">
+
+                            <img
+                                src="../assets/images/product-milk.jpg"
+                                alt="Fresh whole milk"
+                            >
+
+                            <span class="shop-product-badge">
+                                Fresh
+                            </span>
+
+                        </div>
+
+
+                        <div class="shop-product-content">
+
+                            <span class="shop-product-category">
+                                Dairy
+                            </span>
+
+                            <h2>
+                                Fresh Whole Milk
+                            </h2>
+
+                            <p class="shop-product-size">
+                                1 litre
+                            </p>
+
+
+                            <!--
+                                FUTURE SQL DATA:
+
+                                Product price will eventually
+                                come from the products table.
+
+                                Example:
+
+                                SELECT price
+                                FROM products
+                                WHERE product_id = ?;
+
+                                PHP will output the price.
+                            -->
+
+                            <div class="shop-product-footer">
+
+                                <strong>
+                                    KSh 120
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="product-cart"
+                                    data-product-id="1"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 2
+                         ================================================= -->
+
+                    <article
+                        class="shop-product-card"
+                        data-category="eggs"
+                        data-name="Farm Fresh Eggs"
+                        data-price="450"
+                    >
+
+                        <div class="shop-product-image">
+
+                            <img
+                                src="../assets/images/product-eggs.jpg"
+                                alt="Farm fresh eggs"
+                            >
+
+                            <span class="shop-product-badge">
+                                Popular
+                            </span>
+
+                        </div>
+
+
+                        <div class="shop-product-content">
+
+                            <span class="shop-product-category">
+                                Poultry
+                            </span>
+
+                            <h2>
+                                Farm Fresh Eggs
+                            </h2>
+
+                            <p class="shop-product-size">
+                                Tray of 30
+                            </p>
+
+                            <div class="shop-product-footer">
+
+                                <strong>
+                                    KSh 450
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="product-cart"
+                                    data-product-id="2"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 3
+                         ================================================= -->
+
+                    <article
+                        class="shop-product-card"
+                        data-category="cheese"
+                        data-name="Farm Cheese"
+                        data-price="650"
+                    >
+
+                        <div class="shop-product-image">
+
+                            <img
+                                src="../assets/images/product-cheese.jpg"
+                                alt="Farm cheese"
+                            >
+
+                            <span class="shop-product-badge">
+                                Quality
+                            </span>
+
+                        </div>
+
+
+                        <div class="shop-product-content">
+
+                            <span class="shop-product-category">
+                                Dairy
+                            </span>
+
+                            <h2>
+                                Farm Cheese
+                            </h2>
+
+                            <p class="shop-product-size">
+                                500g
+                            </p>
+
+                            <div class="shop-product-footer">
+
+                                <strong>
+                                    KSh 650
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="product-cart"
+                                    data-product-id="3"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 4
+                         ================================================= -->
+
+                    <article
+                        class="shop-product-card"
+                        data-category="meat"
+                        data-name="Fresh Farm Meat"
+                        data-price="850"
+                    >
+
+                        <div class="shop-product-image">
+
+                            <img
+                                src="../assets/images/product-meat.jpg"
+                                alt="Fresh farm meat"
+                            >
+
+                            <span class="shop-product-badge">
+                                Farm Fresh
+                            </span>
+
+                        </div>
+
+
+                        <div class="shop-product-content">
+
+                            <span class="shop-product-category">
+                                Meat
+                            </span>
+
+                            <h2>
+                                Fresh Farm Meat
+                            </h2>
+
+                            <p class="shop-product-size">
+                                1 kg
+                            </p>
+
+                            <div class="shop-product-footer">
+
+                                <strong>
+                                    KSh 850
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="product-cart"
+                                    data-product-id="4"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 5
+                         ================================================= -->
+
+                    <article
+                        class="shop-product-card"
+                        data-category="honey"
+                        data-name="Pure Farm Honey"
+                        data-price="750"
+                    >
+
+                        <div class="shop-product-image">
+
+                            <img
+                                src="../assets/images/honey.jpg"
+                                alt="Pure farm honey"
+                            >
+
+                            <span class="shop-product-badge">
+                                Natural
+                            </span>
+
+                        </div>
+
+
+                        <div class="shop-product-content">
+
+                            <span class="shop-product-category">
+                                Honey
+                            </span>
+
+                            <h2>
+                                Pure Farm Honey
+                            </h2>
+
+                            <p class="shop-product-size">
+                                500g
+                            </p>
+
+                            <div class="shop-product-footer">
+
+                                <strong>
+                                    KSh 750
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="product-cart"
+                                    data-product-id="5"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 6
+                         ================================================= -->
+
+                    <article
+                        class="shop-product-card"
+                        data-category="milk"
+                        data-name="Fresh Farm Yoghurt"
+                        data-price="180"
+                    >
+
+                        <div class="shop-product-image">
+
+                            <img
+                                src="../assets/images/yoghurt.jpg"
+                                alt="Fresh farm yoghurt"
+                            >
+
+                            <span class="shop-product-badge">
+                                Fresh
+                            </span>
+
+                        </div>
+
+
+                        <div class="shop-product-content">
+
+                            <span class="shop-product-category">
+                                Dairy
+                            </span>
+
+                            <h2>
+                                Fresh Farm Yoghurt
+                            </h2>
+
+                            <p class="shop-product-size">
+                                500ml
+                            </p>
+
+                            <div class="shop-product-footer">
+
+                                <strong>
+                                    KSh 180
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="product-cart"
+                                    data-product-id="6"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     EMPTY SEARCH RESULT
+                     ================================================= -->
+
+                <div
+                    class="no-products"
+                    id="noProducts"
+                    hidden
+                >
+
+                    <h2>
+                        No products found
+                    </h2>
+
+                    <p>
+                        Try another search or category.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="container">
+
+                <div class="footer-grid">
+
+
+                    <div class="footer-column">
+
+                        <a
+                            href="../index.html"
+                            class="footer-logo"
+                        >
+                            Farm<span>Hub</span>
+                        </a>
+
+                        <p class="footer-description">
+                            Connecting farmers, veterinarians
+                            and customers through a trusted
+                            agricultural marketplace.
+                        </p>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <h3>
+                            Quick Links
+                        </h3>
+
+                        <div class="footer-links">
+
+                            <a href="../index.html">
+                                Home
+                            </a>
+
+                            <a href="products.html">
+                                Products
+                            </a>
+
+                            <a href="farmers.html">
+                                Farmers
+                            </a>
+
+                            <a href="about.html">
+                                About Us
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <h3>
+                            Services
+                        </h3>
+
+                        <div class="footer-links">
+
+                            <a href="training.html">
+                                Animal Training
+                            </a>
+
+                            <a href="products.html">
+                                Farm Products
+                            </a>
+
+                            <a href="farmers.html">
+                                Find Farmers
+                            </a>
+
+                            <a href="contact.html">
+                                Support
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <h3>
+                            Contact FarmHub
+                        </h3>
+
+                        <div class="footer-links">
+
+                            <a href="mailto:info@farmhub.com">
+                                info@farmhub.com
+                            </a>
+
+                            <a href="tel:+254000000000">
+                                +254 000 000 000
+                            </a>
+
+                            <a href="contact.html">
+                                Kenya
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; 2026 FarmHub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/products.js"></script>
+
+</body>
+
+</html>
