@@ -1247,3 +1247,266 @@
     font-size: var(--text-sm);
 
 }
+/* =========================================================
+   PRODUCT DETAILS RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-details-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .product-gallery {
+
+        position: static;
+
+    }
+
+
+    .product-main-image {
+
+        height: 500px;
+
+    }
+
+
+    .product-information-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .product-details-section {
+
+        padding: 40px 0 55px;
+
+    }
+
+
+    .product-main-image {
+
+        height: 350px;
+
+    }
+
+
+    .product-information h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .product-purchase {
+
+        flex-direction: column;
+
+    }
+
+
+    .quantity-selector {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    .quantity-selector input {
+
+        flex: 1;
+
+    }
+
+
+    .product-features {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .product-information-section,
+    .product-reviews {
+
+        padding: 55px 0;
+
+    }
+
+
+    .reviews-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .reviews-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .specification-row {
+
+        align-items: flex-start;
+
+    }
+
+}
+/* =========================================================
+   CART RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .cart-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cart-summary {
+
+        position: static;
+
+    }
+
+
+    .summary-card {
+
+        max-width: 600px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .cart-page-header {
+
+        padding: 25px 0 35px;
+
+    }
+
+
+    .cart-section {
+
+        padding: 45px 0 65px;
+
+    }
+
+
+    .cart-item {
+
+        grid-template-columns:
+            85px
+            minmax(0, 1fr);
+
+        gap: 13px;
+
+        padding: 13px;
+
+    }
+
+
+    .cart-item-image {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+
+    .cart-item-actions {
+
+        grid-column: 1 / -1;
+
+        justify-content: space-between;
+
+        padding-top: 10px;
+
+        border-top: 1px solid var(--border-color);
+
+    }
+
+
+    .cart-item-total {
+
+        min-width: auto;
+
+        font-size: 13px;
+
+    }
+
+
+    .cart-quantity {
+
+        height: 35px;
+
+    }
+
+
+    .cart-quantity button {
+
+        width: 32px;
+
+    }
+
+
+    .cart-quantity span {
+
+        width: 32px;
+
+    }
+
+
+    .summary-card {
+
+        padding: 20px;
+
+    }
+
+}
