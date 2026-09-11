@@ -1,125 +1,47 @@
 /* =========================================================
-   FARMHUB GLOBAL STYLES
-   File: style.css
-
-   Purpose:
-   - CSS variables
-   - Global reset
-   - Typography
-   - Base elements
-   - Layout utilities
+   FARMHUB GLOBAL STYLESHEET
    ========================================================= */
 
 
 /* =========================================================
-   1. CSS VARIABLES
+   1. ROOT VARIABLES
    ========================================================= */
 
 :root {
 
-    /* -----------------------------------------------------
-       Brand Colors
-       ----------------------------------------------------- */
+    /* Brand Colors */
 
-    --primary-color: #2f7d32;
-    --primary-dark: #205b24;
-    --primary-light: #eaf5ea;
+    --primary-green: #285c32;
+    --dark-green: #193d23;
+    --light-green: #edf5ed;
 
-    --secondary-color: #f4a641;
-    --secondary-dark: #d88922;
+    --orange: #e77b22;
+    --light-orange: #fff3e8;
 
-    /* -----------------------------------------------------
-       Neutral Colors
-       ----------------------------------------------------- */
+    /* Neutral Colors */
 
     --white: #ffffff;
     --black: #111111;
 
-    --text-primary: #1f2933;
-    --text-secondary: #667085;
-    --text-muted: #98a2b3;
+    --text-dark: #222222;
+    --text-light: #666666;
 
-    --border-color: #e4e7ec;
+    --border-color: #e5e5e5;
+    --background: #fafaf7;
 
-    --background: #ffffff;
-    --background-light: #f8faf8;
-    --background-dark: #f2f4f7;
+    /* Typography */
 
+    --font-primary: "Poppins", sans-serif;
 
-    /* -----------------------------------------------------
-       Typography
-       ----------------------------------------------------- */
-
-    --font-heading: "Poppins", sans-serif;
-    --font-body: "Inter", sans-serif;
-
-
-    /* -----------------------------------------------------
-       Font Sizes
-       ----------------------------------------------------- */
-
-    --text-xs: 12px;
-    --text-sm: 14px;
-    --text-md: 16px;
-    --text-lg: 18px;
-    --text-xl: 24px;
-    --text-2xl: 32px;
-    --text-3xl: 42px;
-    --text-4xl: 52px;
-
-
-    /* -----------------------------------------------------
-       Font Weights
-       ----------------------------------------------------- */
-
-    --weight-regular: 400;
-    --weight-medium: 500;
-    --weight-semibold: 600;
-    --weight-bold: 700;
-    --weight-extrabold: 800;
-
-
-    /* -----------------------------------------------------
-       Border Radius
-       ----------------------------------------------------- */
-
-    --radius-sm: 6px;
-    --radius-md: 10px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
-    --radius-full: 999px;
-
-
-    /* -----------------------------------------------------
-       Shadows
-       ----------------------------------------------------- */
-
-    --shadow-sm:
-        0 1px 3px rgba(16, 24, 40, 0.08);
-
-    --shadow-md:
-        0 4px 12px rgba(16, 24, 40, 0.10);
-
-    --shadow-lg:
-        0 10px 30px rgba(16, 24, 40, 0.12);
-
-
-    /* -----------------------------------------------------
-       Layout
-       ----------------------------------------------------- */
+    /* Layout */
 
     --container-width: 1200px;
 
-    --header-height: 76px;
+    /* Effects */
 
+    --border-radius: 10px;
 
-    /* -----------------------------------------------------
-       Transitions
-       ----------------------------------------------------- */
-
-    --transition-fast: 0.2s ease;
-
-    --transition-normal: 0.3s ease;
+    --transition: 0.3s ease;
 
 }
 
@@ -128,22 +50,15 @@
    2. GLOBAL RESET
    ========================================================= */
 
-*,
-*::before,
-*::after {
+* {
 
     margin: 0;
-
     padding: 0;
 
     box-sizing: border-box;
 
 }
 
-
-/* =========================================================
-   3. HTML / BODY
-   ========================================================= */
 
 html {
 
@@ -154,154 +69,650 @@ html {
 
 body {
 
-    min-height: 100vh;
+    font-family: var(--font-primary);
 
-    background-color: var(--background);
+    background: var(--white);
 
-    color: var(--text-primary);
-
-    font-family: var(--font-body);
-
-    font-size: var(--text-md);
-
-    font-weight: var(--weight-regular);
+    color: var(--text-dark);
 
     line-height: 1.6;
 
-    -webkit-font-smoothing: antialiased;
-
 }
 
-
-/* =========================================================
-   4. HEADINGS
-   ========================================================= */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-
-    color: var(--text-primary);
-
-    font-family: var(--font-heading);
-
-    font-weight: var(--weight-bold);
-
-    line-height: 1.2;
-
-}
-
-
-/* =========================================================
-   5. LINKS
-   ========================================================= */
-
-a {
-
-    color: inherit;
-
-    text-decoration: none;
-
-}
-
-
-/* =========================================================
-   6. IMAGES
-   ========================================================= */
 
 img {
 
-    display: block;
-
     max-width: 100%;
+
+    display: block;
 
 }
 
 
-/* =========================================================
-   7. BUTTONS / FORM ELEMENTS
-   ========================================================= */
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
 
 button,
 input,
 textarea,
 select {
 
-    font: inherit;
+    font-family: inherit;
 
 }
 
 
-button {
+/* =========================================================
+   3. CONTAINER
+   ========================================================= */
 
-    border: none;
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   4. BUTTONS
+   ========================================================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    border: 1px solid transparent;
+
+}
+
+
+.btn-primary {
+
+    background: var(--primary-green);
+
+    color: var(--white);
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--dark-green);
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-outline {
+
+    background: transparent;
+
+    border-color: var(--orange);
+
+    color: var(--orange);
+
+}
+
+
+.btn-outline:hover {
+
+    background: var(--orange);
+
+    color: var(--white);
+
+}
+
+
+/* =========================================================
+   5. HEADER
+   ========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border-color);
+
+    z-index: 1000;
+
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.header-container {
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   6. FARMHUB LOGO
+   ========================================================= */
+
+.logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--primary-green);
+
+    white-space: nowrap;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.logo span {
+
+    color: var(--orange);
+
+}
+
+
+/* =========================================================
+   7. MAIN NAVIGATION
+   ========================================================= */
+
+.main-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 26px;
+
+    margin-left: auto;
+
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    color: var(--text-dark);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    padding: 10px 0;
+
+    transition: color var(--transition);
+
+}
+
+
+/* ---------------------------------------------------------
+   NAVIGATION HOVER
+   --------------------------------------------------------- */
+
+.nav-link:hover {
+
+    color: var(--primary-green);
+
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE NAVIGATION LINK
+   --------------------------------------------------------- */
+
+.nav-link.active {
+
+    color: var(--primary-green);
+
+    font-weight: 600;
+
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE LINK UNDERLINE
+   --------------------------------------------------------- */
+
+.nav-link.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--orange);
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================================
+   8. HEADER ACTIONS
+   ========================================================= */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.login-link {
+
+    color: var(--primary-green);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: color var(--transition);
+
+}
+
+
+.login-link:hover {
+
+    color: var(--orange);
+
+}
+
+
+/* =========================================================
+   9. MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 8px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 6px;
+
+    background: var(--white);
 
     cursor: pointer;
 
 }
 
 
-/* =========================================================
-   8. LISTS
-   ========================================================= */
+/* ---------------------------------------------------------
+   HAMBURGER LINES
+   --------------------------------------------------------- */
 
-ul,
-ol {
+.menu-toggle span {
 
-    list-style: none;
+    display: block;
 
-}
+    width: 22px;
 
+    height: 2px;
 
-/* =========================================================
-   9. CONTAINER
-   ========================================================= */
+    margin: 4px auto;
 
-.container {
+    background: var(--primary-green);
 
-    width: min(
-        100% - 40px,
-        var(--container-width)
-    );
+    border-radius: 2px;
 
-    margin-inline: auto;
+    transition: var(--transition);
 
 }
 
 
+/* ---------------------------------------------------------
+   HAMBURGER HOVER
+   --------------------------------------------------------- */
+
+.menu-toggle:hover {
+
+    border-color: var(--primary-green);
+
+}
+
 /* =========================================================
-   10. GLOBAL SECTION
+   10. HERO SECTION
    ========================================================= */
 
-.section {
+.hero-section {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #f7f8ef 0%,
+            #f7f8ef 48%,
+            rgba(247, 248, 239, 0.25) 100%
+        );
 
     padding: 80px 0;
 
 }
 
 
-/* =========================================================
-   11. ACCESSIBILITY
-   ========================================================= */
+.hero-section .container {
 
-:focus-visible {
+    display: grid;
 
-    outline: 3px solid rgba(47, 125, 50, 0.35);
+    grid-template-columns: 1fr 1fr;
 
-    outline-offset: 3px;
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+.hero-content {
+
+    max-width: 580px;
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    line-height: 1.1;
+
+    color: var(--primary-green);
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-content h1 span {
+
+    color: var(--orange);
+
+    display: block;
+
+}
+
+
+.hero-content p {
+
+    max-width: 540px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
 
 }
 
 
 /* =========================================================
-   12. HIDDEN ELEMENT
+   HERO IMAGE
    ========================================================= */
 
-.hidden {
+.hero-image {
 
-    display: none !important;
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+@media (max-width: 768px) {
+
+    .hero-image img {
+
+        height: 280px;
+
+    }
+
+}
+
+/* =========================================================
+   12. COMING SOON SECTION
+   ========================================================= */
+
+.coming-soon-section {
+
+    padding: 80px 0;
+
+    background: var(--white);
+
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    color: var(--primary-green);
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--orange);
+
+}
+
+
+.section-heading p {
+
+    color: var(--text-light);
+
+}
+
+
+/* =========================================================
+   13. FOOTER
+   ========================================================= */
+
+.site-footer {
+
+    background: var(--dark-green);
+
+    color: var(--white);
+
+    padding: 60px 0 20px;
+
+}
+
+
+.footer-content {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+
+}
+
+
+.footer-logo {
+
+    color: var(--white);
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-content p {
+
+    color: #c9d2c9;
+
+    max-width: 380px;
+
+    font-size: 14px;
+
+}
+
+
+.footer-content h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-content > div > a:not(.logo) {
+
+    display: block;
+
+    color: #c9d2c9;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+}
+
+
+.footer-bottom p {
+
+    font-size: 12px;
+
+    color: #aeb9ae;
 
 }

@@ -1,14 +1,5 @@
 /* =========================================================
    FARMHUB MAIN JAVASCRIPT
-   File: main.js
-
-   Purpose:
-   Global frontend interactions.
-
-   Current functionality:
-   - Mobile navigation
-   - Navigation closing
-   - Outside-click detection
    ========================================================= */
 
 
@@ -16,27 +7,125 @@
    1. SELECT NAVIGATION ELEMENTS
    ========================================================= */
 
-const menuToggle = document.getElementById("menuToggle");
+const menuToggle =
+    document.getElementById("menuToggle");
 
-const navMenu = document.getElementById("navMenu");
+const mainNavigation =
+    document.getElementById("mainNavigation");
 
 
 /* =========================================================
-   2. MOBILE MENU
+   2. MOBILE NAVIGATION
    ========================================================= */
 
-if (menuToggle && navMenu) {
+if (menuToggle && mainNavigation) {
 
-    menuToggle.addEventListener("click", () => {
 
-        const isOpen = navMenu.classList.toggle("active");
+    /* -----------------------------------------------------
+       OPEN / CLOSE MOBILE MENU
+       ----------------------------------------------------- */
 
-        menuToggle.classList.toggle("active", isOpen);
+    menuToggle.addEventListener("click", function () {
+
+
+        /* Toggle the active class */
+
+        const isOpen =
+            mainNavigation.classList.toggle("active");
+
+
+        /* -------------------------------------------------
+           Update accessibility state
+           ------------------------------------------------- */
 
         menuToggle.setAttribute(
             "aria-expanded",
             isOpen
         );
+
+
+        /* -------------------------------------------------
+           Update button description
+           ------------------------------------------------- */
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+
+    /* =====================================================
+       3. CLOSE MENU AFTER CLICKING A LINK
+       ===================================================== */
+
+    const navigationLinks =
+        mainNavigation.querySelectorAll(".nav-link");
+
+
+    navigationLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+
+            /* Close navigation */
+
+            mainNavigation.classList.remove("active");
+
+
+            /* Reset accessibility state */
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            /* Reset button label */
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        });
+
+    });
+
+
+    /* =====================================================
+       4. CLOSE MENU WITH ESCAPE KEY
+       ===================================================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+
+            /* Close navigation */
+
+            mainNavigation.classList.remove("active");
+
+
+            /* Reset accessibility state */
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            /* Reset button label */
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
 
     });
 
@@ -44,68 +133,25 @@ if (menuToggle && navMenu) {
 
 
 /* =========================================================
-   3. CLOSE MENU WHEN LINK IS CLICKED
+   5. AUTOMATIC FOOTER YEAR
    ========================================================= */
 
-const navLinks = document.querySelectorAll(".nav-link");
+const footerText =
+    document.querySelector(".footer-bottom p");
 
 
-navLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        if (!navMenu || !menuToggle) {
-            return;
-        }
+if (footerText) {
 
 
-        navMenu.classList.remove("active");
+    /* Get current year */
 
-        menuToggle.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    });
-
-});
+    const currentYear =
+        new Date().getFullYear();
 
 
-/* =========================================================
-   4. CLOSE MENU WHEN CLICKING OUTSIDE
-   ========================================================= */
+    /* Update footer */
 
-document.addEventListener("click", (event) => {
+    footerText.innerHTML =
+        `&copy; ${currentYear} FarmHub. All rights reserved.`;
 
-    if (!navMenu || !menuToggle) {
-        return;
-    }
-
-
-    const clickedInsideMenu =
-        navMenu.contains(event.target);
-
-    const clickedMenuButton =
-        menuToggle.contains(event.target);
-
-
-    if (
-        navMenu.classList.contains("active") &&
-        !clickedInsideMenu &&
-        !clickedMenuButton
-    ) {
-
-        navMenu.classList.remove("active");
-
-        menuToggle.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-});
+}
