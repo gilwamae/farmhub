@@ -9,7 +9,9 @@
 
 :root {
 
-    /* Brand Colors */
+    /* -----------------------------------------------------
+       Brand Colors
+       ----------------------------------------------------- */
 
     --primary-green: #285c32;
     --dark-green: #193d23;
@@ -18,7 +20,10 @@
     --orange: #e77b22;
     --light-orange: #fff3e8;
 
-    /* Neutral Colors */
+
+    /* -----------------------------------------------------
+       Neutral Colors
+       ----------------------------------------------------- */
 
     --white: #ffffff;
     --black: #111111;
@@ -29,15 +34,24 @@
     --border-color: #e5e5e5;
     --background: #fafaf7;
 
-    /* Typography */
+
+    /* -----------------------------------------------------
+       Typography
+       ----------------------------------------------------- */
 
     --font-primary: "Poppins", sans-serif;
 
-    /* Layout */
+
+    /* -----------------------------------------------------
+       Layout
+       ----------------------------------------------------- */
 
     --container-width: 1200px;
 
-    /* Effects */
+
+    /* -----------------------------------------------------
+       Effects
+       ----------------------------------------------------- */
 
     --border-radius: 10px;
 
@@ -77,23 +91,25 @@ body {
 
     line-height: 1.6;
 
+    overflow-x: hidden;
+
 }
 
 
 img {
 
-    max-width: 100%;
-
     display: block;
+
+    max-width: 100%;
 
 }
 
 
 a {
 
-    text-decoration: none;
-
     color: inherit;
+
+    text-decoration: none;
 
 }
 
@@ -109,16 +125,20 @@ select {
 
 
 /* =========================================================
-   3. CONTAINER
+   3. GLOBAL CONTAINER
    ========================================================= */
 
 .container {
 
-    width: 90%;
+    width: 100%;
 
     max-width: var(--container-width);
 
     margin: 0 auto;
+
+    padding-left: 30px;
+
+    padding-right: 30px;
 
 }
 
@@ -137,6 +157,8 @@ select {
 
     padding: 12px 22px;
 
+    border: 1px solid transparent;
+
     border-radius: 6px;
 
     font-size: 14px;
@@ -146,8 +168,6 @@ select {
     cursor: pointer;
 
     transition: var(--transition);
-
-    border: 1px solid transparent;
 
 }
 
@@ -213,9 +233,9 @@ select {
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    HEADER CONTAINER
-   ========================================================= */
+   --------------------------------------------------------- */
 
 .header-container {
 
@@ -240,15 +260,15 @@ select {
 
     align-items: center;
 
+    color: var(--primary-green);
+
     font-size: 25px;
 
     font-weight: 700;
 
-    color: var(--primary-green);
+    letter-spacing: -0.5px;
 
     white-space: nowrap;
-
-    letter-spacing: -0.5px;
 
 }
 
@@ -281,22 +301,18 @@ select {
 
     position: relative;
 
+    padding: 10px 0;
+
     color: var(--text-dark);
 
     font-size: 13px;
 
     font-weight: 500;
 
-    padding: 10px 0;
-
     transition: color var(--transition);
 
 }
 
-
-/* ---------------------------------------------------------
-   NAVIGATION HOVER
-   --------------------------------------------------------- */
 
 .nav-link:hover {
 
@@ -304,10 +320,6 @@ select {
 
 }
 
-
-/* ---------------------------------------------------------
-   ACTIVE NAVIGATION LINK
-   --------------------------------------------------------- */
 
 .nav-link.active {
 
@@ -317,10 +329,6 @@ select {
 
 }
 
-
-/* ---------------------------------------------------------
-   ACTIVE LINK UNDERLINE
-   --------------------------------------------------------- */
 
 .nav-link.active::after {
 
@@ -403,10 +411,6 @@ select {
 }
 
 
-/* ---------------------------------------------------------
-   HAMBURGER LINES
-   --------------------------------------------------------- */
-
 .menu-toggle span {
 
     display: block;
@@ -426,15 +430,12 @@ select {
 }
 
 
-/* ---------------------------------------------------------
-   HAMBURGER HOVER
-   --------------------------------------------------------- */
-
 .menu-toggle:hover {
 
     border-color: var(--primary-green);
 
 }
+
 
 /* =========================================================
    10. HERO SECTION
@@ -442,8 +443,9 @@ select {
 
 .hero-section {
 
-    background:
+    padding: 90px 0;
 
+    background:
         linear-gradient(
             90deg,
             #f7f8ef 0%,
@@ -451,27 +453,42 @@ select {
             rgba(247, 248, 239, 0.25) 100%
         );
 
-    padding: 80px 0;
-
 }
 
 
-.hero-section .container {
+/* ---------------------------------------------------------
+   HERO CONTAINER
+
+   The ">" is important.
+
+   It means only the direct container belonging to
+   the Hero becomes a grid.
+   --------------------------------------------------------- */
+
+.hero-section > .hero-container {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     align-items: center;
 
-    gap: 50px;
+    gap: 70px;
 
 }
 
 
+/* ---------------------------------------------------------
+   HERO CONTENT
+   --------------------------------------------------------- */
+
 .hero-content {
 
-    max-width: 580px;
+    width: 100%;
+
+    max-width: 560px;
 
 }
 
@@ -479,6 +496,8 @@ select {
 .section-label {
 
     display: inline-block;
+
+    margin-bottom: 14px;
 
     color: var(--orange);
 
@@ -490,45 +509,53 @@ select {
 
     letter-spacing: 1px;
 
-    margin-bottom: 12px;
-
 }
 
 
 .hero-content h1 {
 
-    font-size: clamp(40px, 5vw, 62px);
-
-    line-height: 1.1;
+    margin-bottom: 22px;
 
     color: var(--primary-green);
 
-    margin-bottom: 20px;
+    font-size: clamp(44px, 5vw, 64px);
+
+    font-weight: 700;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
 
 }
 
 
 .hero-content h1 span {
 
-    color: var(--orange);
-
     display: block;
+
+    color: var(--orange);
 
 }
 
 
 .hero-content p {
 
-    max-width: 540px;
+    max-width: 530px;
+
+    margin-bottom: 30px;
 
     color: var(--text-light);
 
     font-size: 16px;
 
-    margin-bottom: 30px;
+    line-height: 1.8;
 
 }
 
+
+/* ---------------------------------------------------------
+   HERO BUTTONS
+   --------------------------------------------------------- */
 
 .hero-buttons {
 
@@ -541,9 +568,9 @@ select {
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    HERO IMAGE
-   ========================================================= */
+   --------------------------------------------------------- */
 
 .hero-image {
 
@@ -558,87 +585,257 @@ select {
 
 .hero-image img {
 
+    display: block;
+
     width: 100%;
 
-    height: 430px;
+    height: 460px;
 
     object-fit: cover;
 
-    display: block;
-
 }
-@media (max-width: 768px) {
 
-    .hero-image img {
-
-        height: 280px;
-
-    }
-
-}
 
 /* =========================================================
-   12. COMING SOON SECTION
+   11. TRUST / QUALITY SECTION
    ========================================================= */
 
-.coming-soon-section {
+.trust-section {
 
-    padding: 80px 0;
+    width: 100%;
+
+    padding: 110px 0;
 
     background: var(--white);
 
 }
 
 
-.section-heading {
+/* ---------------------------------------------------------
+   TRUST CONTAINER
+   --------------------------------------------------------- */
 
-    max-width: 700px;
+.trust-container {
 
-    margin: 0 auto;
+    display: grid;
 
-    text-align: center;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 80px;
 
 }
 
 
-.section-heading h2 {
+/* ---------------------------------------------------------
+   TRUST IMAGE
+   --------------------------------------------------------- */
 
-    font-size: 36px;
+.trust-image {
 
-    line-height: 1.2;
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+}
+
+
+.trust-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRUST CONTENT
+   --------------------------------------------------------- */
+
+.trust-content {
+
+    width: 100%;
+
+    max-width: 550px;
+
+}
+
+
+.trust-content .section-label {
+
+    margin-bottom: 14px;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRUST HEADING
+   --------------------------------------------------------- */
+
+.trust-content h2 {
+
+    margin-bottom: 22px;
 
     color: var(--primary-green);
 
-    margin-bottom: 15px;
+    font-size: clamp(40px, 4vw, 54px);
+
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.2px;
 
 }
 
 
-.section-heading h2 span {
+.trust-content h2 span {
+
+    display: block;
 
     color: var(--orange);
 
 }
 
 
-.section-heading p {
+/* ---------------------------------------------------------
+   TRUST DESCRIPTION
+   --------------------------------------------------------- */
+
+.trust-description {
+
+    max-width: 520px;
+
+    margin-bottom: 36px;
 
     color: var(--text-light);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRUST FEATURES
+   --------------------------------------------------------- */
+
+.trust-features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRUST FEATURE
+   --------------------------------------------------------- */
+
+.trust-feature {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRUST FEATURE ICON
+   --------------------------------------------------------- */
+
+.trust-feature-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    color: var(--primary-green);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRUST FEATURE CONTENT
+   --------------------------------------------------------- */
+
+.trust-feature-content {
+
+    flex: 1;
+
+}
+
+
+.trust-feature-content h3 {
+
+    margin-bottom: 5px;
+
+    color: var(--text-dark);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+.trust-feature-content p {
+
+    max-width: 460px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.7;
 
 }
 
 
 /* =========================================================
-   13. FOOTER
+   12. FOOTER
    ========================================================= */
 
 .site-footer {
 
+    padding: 60px 0 20px;
+
     background: var(--dark-green);
 
     color: var(--white);
-
-    padding: 60px 0 20px;
 
 }
 
@@ -656,20 +853,20 @@ select {
 
 .footer-logo {
 
-    color: var(--white);
-
     display: inline-block;
 
     margin-bottom: 15px;
+
+    color: var(--white);
 
 }
 
 
 .footer-content p {
 
-    color: #c9d2c9;
-
     max-width: 380px;
+
+    color: #c9d2c9;
 
     font-size: 14px;
 
@@ -678,9 +875,9 @@ select {
 
 .footer-content h3 {
 
-    font-size: 15px;
-
     margin-bottom: 15px;
+
+    font-size: 15px;
 
 }
 
@@ -689,30 +886,480 @@ select {
 
     display: block;
 
+    margin-bottom: 8px;
+
     color: #c9d2c9;
 
     font-size: 13px;
 
-    margin-bottom: 8px;
+    transition: color var(--transition);
+
+}
+
+
+.footer-content > div > a:not(.logo):hover {
+
+    color: var(--white);
 
 }
 
 
 .footer-bottom {
 
-    border-top: 1px solid rgba(255,255,255,0.15);
-
     margin-top: 40px;
 
     padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 
 }
 
 
 .footer-bottom p {
 
+    color: #aeb9ae;
+
     font-size: 12px;
 
-    color: #aeb9ae;
+}
+
+
+/* =========================================================
+   13. TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .main-navigation {
+
+        gap: 18px;
+
+    }
+
+
+    .nav-link {
+
+        font-size: 12px;
+
+    }
+
+
+    .header-actions {
+
+        gap: 12px;
+
+    }
+
+
+    .hero-section > .hero-container {
+
+        gap: 45px;
+
+    }
+
+
+    .trust-container {
+
+        gap: 50px;
+
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .header-container {
+
+        min-height: 70px;
+
+        justify-content: space-between;
+
+    }
+
+
+    .main-navigation {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px 5%;
+
+        background: var(--white);
+
+        border-bottom: 1px solid var(--border-color);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+    }
+
+
+    .main-navigation.active {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+        margin-left: 0;
+
+    }
+
+
+    .nav-link {
+
+        width: 100%;
+
+        padding: 10px 0;
+
+    }
+
+
+    .nav-link.active::after {
+
+        bottom: 0;
+
+        width: 35px;
+
+    }
+
+
+    .header-actions {
+
+        margin-left: auto;
+
+    }
+
+
+    .header-actions .btn {
+
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero-section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .hero-section > .hero-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .hero-content {
+
+        max-width: 650px;
+
+        margin: 0 auto;
+
+        text-align: center;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .hero-content p {
+
+        margin-right: auto;
+
+        margin-left: auto;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero-image img {
+
+        height: 350px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       TRUST
+       ----------------------------------------------------- */
+
+    .trust-section {
+
+        padding: 75px 0;
+
+    }
+
+
+    .trust-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .trust-image {
+
+        max-width: 700px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .trust-image img {
+
+        height: 400px;
+
+    }
+
+
+    .trust-content {
+
+        max-width: 700px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .trust-content h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .footer-content {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+    }
+
+}
+
+
+/* =========================================================
+   15. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* -----------------------------------------------------
+       CONTAINER
+       ----------------------------------------------------- */
+
+    .container {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .logo {
+
+        font-size: 23px;
+
+    }
+
+
+    .login-link {
+
+        font-size: 12px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero-section {
+
+        padding: 55px 0;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 36px;
+
+        letter-spacing: -0.8px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .hero-image img {
+
+        height: 280px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       TRUST
+       ----------------------------------------------------- */
+
+    .trust-section {
+
+        padding: 60px 0;
+
+    }
+
+
+    .trust-image img {
+
+        height: 300px;
+
+    }
+
+
+    .trust-content {
+
+        text-align: center;
+
+    }
+
+
+    .trust-content h2 {
+
+        font-size: 36px;
+
+        letter-spacing: -0.8px;
+
+    }
+
+
+    .trust-description {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .trust-feature {
+
+        text-align: left;
+
+    }
+
+
+    .trust-feature-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 16px;
+
+    }
+
+
+    .trust-feature-content p {
+
+        font-size: 13px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
 
 }

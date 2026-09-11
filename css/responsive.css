@@ -275,6 +275,36 @@
         gap: 30px;
 
     }
+    /* =========================================================
+   TRUST / QUALITY SECTION
+   ========================================================= */
+
+.trust-section {
+    padding: 70px 0;
+}
+
+.trust-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+}
+
+.trust-image {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.trust-image img {
+    height: 420px;
+}
+
+.trust-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.trust-content h2 {
+    font-size: 42px;
+}
 
 }
 
