@@ -1,535 +1,1293 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- =========================================================
          BASIC DOCUMENT SETTINGS
          ========================================================= -->
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="FarmHub - A trusted marketplace connecting farmers, customers and veterinary professionals."
-    >
+      name="description"
+      content="FarmHub - A trusted marketplace connecting farmers, customers and veterinary professionals."
+    />
 
     <title>FarmHub | Farm Products Marketplace</title>
-
 
     <!-- =========================================================
          GOOGLE FONT
          ========================================================= -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- =========================================================
          CSS FILES
          ========================================================= -->
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link
-        rel="stylesheet"
-        href="css/responsive.css"
-    >
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/categories.css" />
+    <link rel="stylesheet" href="css/how-it-works.css" />
+  </head>
 
-</head>
-
-
-<body>
-
-
+  <body>
     <!-- =========================================================
          HEADER / MAIN NAVIGATION
          ========================================================= -->
 
     <header class="site-header">
-
-        <div class="container header-container">
-
-
-            <!-- =================================================
+      <div class="container header-container">
+        <!-- =================================================
                  FARMHUB LOGO
                  ================================================= -->
 
-            <a
-                href="index.html"
-                class="logo"
-                aria-label="FarmHub Home"
-            >
-                Farm<span>Hub</span>
-            </a>
+        <a href="index.html" class="logo" aria-label="FarmHub Home">
+          Farm<span>Hub</span>
+        </a>
 
-
-            <!-- =================================================
+        <!-- =================================================
                  MAIN NAVIGATION
                  ================================================= -->
 
-            <nav
-                class="main-navigation"
-                id="mainNavigation"
-                aria-label="Main navigation"
-            >
+        <nav
+          class="main-navigation"
+          id="mainNavigation"
+          aria-label="Main navigation"
+        >
+          <a href="index.html" class="nav-link active"> Home </a>
 
-                <a
-                    href="index.html"
-                    class="nav-link active"
-                >
-                    Home
-                </a>
+          <a href="pages/products.html" class="nav-link"> Products </a>
 
-                <a
-                    href="pages/products.html"
-                    class="nav-link"
-                >
-                    Products
-                </a>
+          <a href="pages/farmers.html" class="nav-link"> Farmers </a>
 
-                <a
-                    href="pages/farmers.html"
-                    class="nav-link"
-                >
-                    Farmers
-                </a>
+          <a href="pages/veterinarians.html" class="nav-link">
+            Veterinarians
+          </a>
 
-                <a
-                    href="pages/veterinarians.html"
-                    class="nav-link"
-                >
-                    Veterinarians
-                </a>
+          <a href="pages/training.html" class="nav-link"> Animal Training </a>
 
-                <a
-                    href="pages/training.html"
-                    class="nav-link"
-                >
-                    Animal Training
-                </a>
+          <a href="pages/about.html" class="nav-link"> About </a>
 
-                <a
-                    href="pages/about.html"
-                    class="nav-link"
-                >
-                    About
-                </a>
+          <a href="pages/contact.html" class="nav-link"> Contact </a>
+        </nav>
 
-                <a
-                    href="pages/contact.html"
-                    class="nav-link"
-                >
-                    Contact
-                </a>
-
-            </nav>
-
-
-            <!-- =================================================
+        <!-- =================================================
                  HEADER ACTIONS
                  ================================================= -->
 
-            <div class="header-actions">
+        <div class="header-actions">
+          <a href="pages/login.html" class="login-link"> Login </a>
 
-                <a
-                    href="pages/login.html"
-                    class="login-link"
-                >
-                    Login
-                </a>
+          <a href="pages/register.html" class="btn btn-primary">
+            Get Started
+          </a>
+        </div>
 
-                <a
-                    href="pages/register.html"
-                    class="btn btn-primary"
-                >
-                    Get Started
-                </a>
-
-            </div>
-
-
-            <!-- =================================================
+        <!-- =================================================
                  MOBILE MENU BUTTON
                  ================================================= -->
 
-            <button
-                type="button"
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="mainNavigation"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mainNavigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
-
 
     <!-- =========================================================
          MAIN CONTENT
          ========================================================= -->
 
     <main>
-
-
-        <!-- =====================================================
+      <!-- =====================================================
              HERO SECTION
              ===================================================== -->
 
-        <section class="hero-section">
-
-            <div class="container hero-container">
-
-
-                <!-- =================================================
+      <section class="hero-section">
+        <div class="container hero-container">
+          <!-- =================================================
                      HERO CONTENT
                      ================================================= -->
 
-                <div class="hero-content">
+          <div class="hero-content">
+            <span class="section-label"> Trusted Farm Marketplace </span>
 
-                    <span class="section-label">
-                        Trusted Farm Marketplace
-                    </span>
+            <h1>
+              Fresh From
+              <span>Farm to Table.</span>
+            </h1>
 
-                    <h1>
-                        Fresh From
-                        <span>Farm to Table.</span>
-                    </h1>
+            <p>
+              Buy fresh, quality farm products directly from trusted farmers,
+              backed by professional veterinary care and clearance.
+            </p>
 
-                    <p>
-                        Buy fresh, quality farm products directly
-                        from trusted farmers, backed by professional
-                        veterinary care and clearance.
-                    </p>
-
-
-                    <!-- =================================================
+            <!-- =================================================
                          HERO BUTTONS
                          ================================================= -->
 
-                    <div class="hero-buttons">
+            <div class="hero-buttons">
+              <a href="pages/products.html" class="btn btn-primary">
+                Explore Products
+              </a>
 
-                        <a
-                            href="pages/products.html"
-                            class="btn btn-primary"
-                        >
-                            Explore Products
-                        </a>
+              <a href="pages/register.html" class="btn btn-outline">
+                Join FarmHub
+              </a>
+            </div>
+          </div>
 
-                        <a
-                            href="pages/register.html"
-                            class="btn btn-outline"
-                        >
-                            Join FarmHub
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      HERO IMAGE
                      ================================================= -->
 
-                <div class="hero-image">
+          <div class="hero-image">
+            <img
+              src="assets/images/farm-hero.jpg"
+              alt="Fresh farm products from a trusted FarmHub farmer"
+            />
+          </div>
+        </div>
+      </section>
 
-                    <img
-                        src="assets/images/farm-hero.jpg"
-                        alt="Fresh farm products from a trusted FarmHub farmer"
-                    >
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
+      <!-- =====================================================
              TRUST / QUALITY SECTION
              ===================================================== -->
 
-        <section class="trust-section">
-
-            <div class="container trust-container">
-
-
-                <!-- =================================================
+      <section class="trust-section">
+        <div class="container trust-container">
+          <!-- =================================================
                      TRUST IMAGE
                      ================================================= -->
 
-                <div class="trust-image">
+          <div class="trust-image">
+            <img
+              src="assets/images/animal-training.jpg"
+              alt="Farmer working with fresh quality farm products"
+            />
+          </div>
 
-                    <img
-                        src="assets/images/farm-quality.jpg"
-                        alt="Farmer working with fresh quality farm products"
-                    >
-
-                </div>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      TRUST CONTENT
                      ================================================= -->
 
-                <div class="trust-content">
+          <div class="trust-content">
+            <span class="section-label"> Why Choose FarmHub </span>
 
-                    <span class="section-label">
-                        Why Choose FarmHub
-                    </span>
+            <h2>
+              Quality You Can Trust,
+              <span>From Farm to You.</span>
+            </h2>
 
-                    <h2>
-                        Quality You Can Trust,
-                        <span>From Farm to You.</span>
-                    </h2>
+            <p class="trust-description">
+              FarmHub brings farmers, customers and veterinary professionals
+              together to create a marketplace built around quality,
+              transparency and responsible farming.
+            </p>
 
-                    <p class="trust-description">
-                        FarmHub brings farmers, customers and veterinary
-                        professionals together to create a marketplace
-                        built around quality, transparency and responsible
-                        farming.
-                    </p>
-
-
-                    <!-- =================================================
+            <!-- =================================================
                          TRUST FEATURES
                          ================================================= -->
 
-                    <div class="trust-features">
-
-
-                        <!-- =================================================
+            <div class="trust-features">
+              <!-- =================================================
                              FEATURE 1
                              ================================================= -->
 
-                        <div class="trust-feature">
+              <div class="trust-feature">
+                <div class="trust-feature-icon">✓</div>
 
-                            <div class="trust-feature-icon">
-                                ✓
-                            </div>
+                <div class="trust-feature-content">
+                  <h3>Verified Farmers</h3>
 
-                            <div class="trust-feature-content">
+                  <p>
+                    Connect with trusted farmers and discover products sourced
+                    directly from farms.
+                  </p>
+                </div>
+              </div>
 
-                                <h3>
-                                    Verified Farmers
-                                </h3>
-
-                                <p>
-                                    Connect with trusted farmers and
-                                    discover products sourced directly
-                                    from farms.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =================================================
+              <!-- =================================================
                              FEATURE 2
                              ================================================= -->
 
-                        <div class="trust-feature">
+              <div class="trust-feature">
+                <div class="trust-feature-icon">✓</div>
 
-                            <div class="trust-feature-icon">
-                                ✓
-                            </div>
+                <div class="trust-feature-content">
+                  <h3>Veterinary Support</h3>
 
-                            <div class="trust-feature-content">
+                  <p>
+                    Veterinary professionals help support animal health, safety
+                    and appropriate product clearances.
+                  </p>
+                </div>
+              </div>
 
-                                <h3>
-                                    Veterinary Support
-                                </h3>
-
-                                <p>
-                                    Veterinary professionals help support
-                                    animal health, safety and appropriate
-                                    product clearances.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =================================================
+              <!-- =================================================
                              FEATURE 3
                              ================================================= -->
 
-                        <div class="trust-feature">
+              <div class="trust-feature">
+                <div class="trust-feature-icon">✓</div>
 
-                            <div class="trust-feature-icon">
-                                ✓
-                            </div>
+                <div class="trust-feature-content">
+                  <h3>Quality Products</h3>
 
-                            <div class="trust-feature-content">
-
-                                <h3>
-                                    Quality Products
-                                </h3>
-
-                                <p>
-                                    Shop farm products with greater
-                                    confidence through a marketplace
-                                    focused on quality and transparency.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
+                  <p>
+                    Shop farm products with greater confidence through a
+                    marketplace focused on quality and transparency.
+                  </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================================
+             PAGE INTRODUCTION
+             ===================================================== -->
 
+      <section class="categories-hero">
+        <div class="container categories-hero-container">
+          <div class="categories-hero-content">
+            <span class="section-label"> FarmHub Marketplace </span>
+
+            <h1>
+              Explore Our
+              <span>Product Categories.</span>
+            </h1>
+
+            <p>
+              Discover fresh and quality products from trusted farmers across
+              different farm categories.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             PRODUCT CATEGORIES
+             ===================================================== -->
+
+      <section class="categories-section">
+        <div class="container">
+          <!-- =================================================
+                     SECTION HEADER
+                     ================================================= -->
+
+          <div class="categories-heading">
+            <div>
+              <span class="section-label"> Shop by Category </span>
+
+              <h2>Find What You Need</h2>
             </div>
 
-        </section>
+            <p id="categoryCount">Showing 8 categories</p>
+          </div>
 
+          <!-- =================================================
+                     FILTER / SORT CONTROLS
+                     ================================================= -->
 
+          <div class="category-controls">
+            <!-- =================================================
+                         SEARCH
+                         ================================================= -->
+
+            <div class="category-search">
+              <label for="categorySearch" class="sr-only">
+                Search product categories
+              </label>
+
+              <input
+                type="search"
+                id="categorySearch"
+                placeholder="Search categories..."
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- =================================================
+                         CATEGORY FILTER
+                         ================================================= -->
+
+            <div class="category-filter">
+              <label for="categoryType" class="sr-only">
+                Filter categories
+              </label>
+
+              <select id="categoryType">
+                <option value="all">All Categories</option>
+
+                <option value="animal">Animal Products</option>
+
+                <option value="crop">Crops & Produce</option>
+
+                <option value="processed">Processed Products</option>
+              </select>
+            </div>
+
+            <!-- =================================================
+                         SORT
+                         ================================================= -->
+
+            <div class="category-sort">
+              <label for="categorySort" class="sr-only">
+                Sort categories
+              </label>
+
+              <select id="categorySort">
+                <option value="default">Sort: Recommended</option>
+
+                <option value="az">Name: A - Z</option>
+
+                <option value="za">Name: Z - A</option>
+
+                <option value="products-high">Most Products</option>
+
+                <option value="products-low">Fewest Products</option>
+              </select>
+            </div>
+
+            <!-- =================================================
+                         CLEAR FILTERS
+                         ================================================= -->
+
+            <button type="button" class="clear-filters" id="clearFilters">
+              Clear Filters
+            </button>
+          </div>
+
+          <!-- =================================================
+                     CATEGORY GRID
+                     ================================================= -->
+
+          <div class="category-grid" id="categoryGrid">
+            <!-- =================================================
+                         CATEGORY 1 - DAIRY
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Milk & Dairy"
+              data-type="animal"
+              data-products="28"
+            >
+              <a href="products.html?category=dairy" class="category-card-link">
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/milk-dairy.jpg"
+                    alt="Fresh milk and dairy products"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Animal Products </span>
+
+                  <h3>Milk & Dairy</h3>
+
+                  <p>
+                    Fresh milk, yoghurt, butter, cream and other dairy products.
+                  </p>
+
+                  <span class="category-products"> 28 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 2 - MEAT
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Meat & Poultry"
+              data-type="animal"
+              data-products="24"
+            >
+              <a href="products.html?category=meat" class="category-card-link">
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/meat-poultry.jpg"
+                    alt="Fresh meat and poultry products"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Animal Products </span>
+
+                  <h3>Meat & Poultry</h3>
+
+                  <p>
+                    Quality meat and poultry products sourced from trusted
+                    farms.
+                  </p>
+
+                  <span class="category-products"> 24 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 3 - EGGS
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Eggs"
+              data-type="animal"
+              data-products="16"
+            >
+              <a href="products.html?category=eggs" class="category-card-link">
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/eggs.jpg"
+                    alt="Fresh farm eggs"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Animal Products </span>
+
+                  <h3>Eggs</h3>
+
+                  <p>Fresh farm eggs from trusted poultry farmers.</p>
+
+                  <span class="category-products"> 16 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 4 - FRUITS
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Fruits"
+              data-type="crop"
+              data-products="32"
+            >
+              <a
+                href="products.html?category=fruits"
+                class="category-card-link"
+              >
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/fruits.jpg"
+                    alt="Fresh farm fruits"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Crops & Produce </span>
+
+                  <h3>Fruits</h3>
+
+                  <p>Fresh seasonal fruits sourced directly from farmers.</p>
+
+                  <span class="category-products"> 32 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 5 - VEGETABLES
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Vegetables"
+              data-type="crop"
+              data-products="41"
+            >
+              <a
+                href="products.html?category=vegetables"
+                class="category-card-link"
+              >
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/vegetables.jpg"
+                    alt="Fresh farm vegetables"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Crops & Produce </span>
+
+                  <h3>Vegetables</h3>
+
+                  <p>Fresh vegetables grown by trusted local farmers.</p>
+
+                  <span class="category-products"> 41 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 6 - GRAINS
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Grains & Cereals"
+              data-type="crop"
+              data-products="19"
+            >
+              <a
+                href="products.html?category=grains"
+                class="category-card-link"
+              >
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/grains.jpg"
+                    alt="Farm grains and cereals"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Crops & Produce </span>
+
+                  <h3>Grains & Cereals</h3>
+
+                  <p>
+                    Quality grains and cereals from trusted agricultural
+                    producers.
+                  </p>
+
+                  <span class="category-products"> 19 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 7 - HONEY
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Honey & Bee Products"
+              data-type="processed"
+              data-products="12"
+            >
+              <a href="products.html?category=honey" class="category-card-link">
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/honey.jpg"
+                    alt="Fresh honey and bee products"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Processed Products </span>
+
+                  <h3>Honey & Bee Products</h3>
+
+                  <p>Natural honey and selected products from beekeepers.</p>
+
+                  <span class="category-products"> 12 Products </span>
+                </div>
+              </a>
+            </article>
+
+            <!-- =================================================
+                         CATEGORY 8 - CHEESE
+                         ================================================= -->
+
+            <article
+              class="category-card"
+              data-name="Cheese & Processed Dairy"
+              data-type="processed"
+              data-products="14"
+            >
+              <a
+                href="products.html?category=cheese"
+                class="category-card-link"
+              >
+                <div class="category-image">
+                  <img
+                    src="../assets/images/categories/cheese.jpg"
+                    alt="Fresh cheese and processed dairy products"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="category-card-content">
+                  <span class="category-type"> Processed Products </span>
+
+                  <h3>Cheese & Processed Dairy</h3>
+
+                  <p>Quality cheese and carefully prepared dairy products.</p>
+
+                  <span class="category-products"> 14 Products </span>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- =================================================
+                     NO RESULTS MESSAGE
+                     ================================================= -->
+
+          <div class="no-results" id="noResults" hidden>
+            <div class="no-results-icon">!</div>
+
+            <h3>No Categories Found</h3>
+
+            <p>Try changing your search or removing some filters.</p>
+
+            <button type="button" class="btn btn-primary" id="resetResults">
+              Reset Filters
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================================
+             INTRODUCTION
+             ===================================================== -->
+
+      <section class="how-intro section-padding">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label"> One Platform </span>
+
+            <h2>Bringing the Farm-to-Market Journey Together</h2>
+
+            <p>
+              FarmHub brings farmers, customers and veterinary professionals
+              into one easy-to-use platform. Whether you are buying fresh
+              products or selling what your farm produces, the process is
+              designed to be straightforward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             HOW IT WORKS STEPS
+             ===================================================== -->
+
+      <section class="how-steps section-padding">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label"> For Customers </span>
+
+            <h2>From Farm to Your Door</h2>
+
+            <p>
+              Finding and purchasing farm products should not feel complicated.
+              FarmHub keeps the customer journey simple.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <!-- STEP 01 -->
+
+            <article class="step-card">
+              <div class="step-number">01</div>
+
+              <div class="step-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <h3>Discover Products</h3>
+
+              <p>
+                Browse products from different farms and explore categories such
+                as milk, cheese, meat, eggs, fruits, vegetables and grains.
+              </p>
+            </article>
+
+            <!-- STEP 02 -->
+
+            <article class="step-card">
+              <div class="step-number">02</div>
+
+              <div class="step-icon">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+
+              <h3>Compare & Choose</h3>
+
+              <p>
+                Use search, filtering and sorting tools to find products that
+                match your needs, budget and preferred farm.
+              </p>
+            </article>
+
+            <!-- STEP 03 -->
+
+            <article class="step-card">
+              <div class="step-number">03</div>
+
+              <div class="step-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+
+              <h3>Check Quality</h3>
+
+              <p>
+                FarmHub connects agricultural products with trusted farm
+                information and veterinary clearance where applicable.
+              </p>
+            </article>
+
+            <!-- STEP 04 -->
+
+            <article class="step-card">
+              <div class="step-number">04</div>
+
+              <div class="step-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+
+              <h3>Place Your Order</h3>
+
+              <p>
+                Add products to your cart, review your order and proceed through
+                a simple checkout process.
+              </p>
+            </article>
+
+            <!-- STEP 05 -->
+
+            <article class="step-card">
+              <div class="step-number">05</div>
+
+              <div class="step-icon">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+
+              <h3>Receive Your Products</h3>
+
+              <p>
+                Your order moves through the delivery process so you can receive
+                your farm products with less hassle.
+              </p>
+            </article>
+
+            <!-- STEP 06 -->
+
+            <article class="step-card">
+              <div class="step-number">06</div>
+
+              <div class="step-icon">
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <h3>Review & Connect</h3>
+
+              <p>
+                Share your experience through reviews and continue discovering
+                trusted farmers and products on FarmHub.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             FARMER JOURNEY
+             ===================================================== -->
+
+      <section class="farmer-journey section-padding">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label"> For Farmers </span>
+
+            <h2>Turn Your Farm Into a Growing Marketplace</h2>
+
+            <p>
+              FarmHub gives farmers a digital platform to showcase their
+              products, connect with customers and manage their marketplace
+              activities.
+            </p>
+          </div>
+
+          <div class="farmer-process">
+            <!-- FARMER STEP 01 -->
+
+            <div class="farmer-process-item">
+              <div class="farmer-process-icon">
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+
+              <div>
+                <span> Step 01 </span>
+
+                <h3>Create Your Account</h3>
+
+                <p>Register as a farmer and create your FarmHub profile.</p>
+              </div>
+            </div>
+
+            <!-- FARMER STEP 02 -->
+
+            <div class="farmer-process-item">
+              <div class="farmer-process-icon">
+                <i class="fa-solid fa-tractor"></i>
+              </div>
+
+              <div>
+                <span> Step 02 </span>
+
+                <h3>Set Up Your Farm</h3>
+
+                <p>
+                  Add information about your farm, animals and agricultural
+                  activities.
+                </p>
+              </div>
+            </div>
+
+            <!-- FARMER STEP 03 -->
+
+            <div class="farmer-process-item">
+              <div class="farmer-process-icon">
+                <i class="fa-solid fa-stethoscope"></i>
+              </div>
+
+              <div>
+                <span> Step 03 </span>
+
+                <h3>Work With a Veterinarian</h3>
+
+                <p>
+                  Veterinary professionals can help assess animal health and
+                  provide applicable clearances and recommendations.
+                </p>
+              </div>
+            </div>
+
+            <!-- FARMER STEP 04 -->
+
+            <div class="farmer-process-item">
+              <div class="farmer-process-icon">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+
+              <div>
+                <span> Step 04 </span>
+
+                <h3>List Your Products</h3>
+
+                <p>
+                  Add products, prices, descriptions, availability and other
+                  relevant details.
+                </p>
+              </div>
+            </div>
+
+            <!-- FARMER STEP 05 -->
+
+            <div class="farmer-process-item">
+              <div class="farmer-process-icon">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+
+              <div>
+                <span> Step 05 </span>
+
+                <h3>Connect With Customers</h3>
+
+                <p>
+                  Make your products visible to customers looking for farm-fresh
+                  products.
+                </p>
+              </div>
+            </div>
+
+            <!-- FARMER STEP 06 -->
+
+            <div class="farmer-process-item">
+              <div class="farmer-process-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <div>
+                <span> Step 06 </span>
+
+                <h3>Manage & Grow</h3>
+
+                <p>
+                  Manage inventory, orders and sales while building your
+                  presence on FarmHub.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             CORE FEATURES
+             ===================================================== -->
+
+      <section class="features-section section-padding">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="section-label"> Built for Agriculture </span>
+
+            <h2>What Makes FarmHub Useful?</h2>
+
+            <p>
+              FarmHub combines marketplace functionality with tools designed
+              around the needs of farmers, customers and veterinary
+              professionals.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <!-- FEATURE 01 -->
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-store"></i>
+              </div>
+
+              <h3>Farm Marketplace</h3>
+
+              <p>
+                Farmers can showcase their products while customers can discover
+                products from different farms in one place.
+              </p>
+            </article>
+
+            <!-- FEATURE 02 -->
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+
+              <h3>Easy Product Discovery</h3>
+
+              <p>
+                Search, categories, filters and sorting make it easier for
+                customers to find what they are looking for.
+              </p>
+            </article>
+
+            <!-- FEATURE 03 -->
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+
+              <h3>Veterinary Support</h3>
+
+              <p>
+                Veterinary professionals can manage animal health information,
+                examinations, recommendations and applicable clearances.
+              </p>
+            </article>
+
+            <!-- FEATURE 04 -->
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+
+              <h3>Product & Inventory Management</h3>
+
+              <p>
+                Farmers can keep track of products, availability, inventory and
+                marketplace listings.
+              </p>
+            </article>
+
+            <!-- FEATURE 05 -->
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+
+              <h3>Order Management</h3>
+
+              <p>
+                Customers can track their orders while farmers can manage
+                incoming orders and sales.
+              </p>
+            </article>
+
+            <!-- FEATURE 06 -->
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+
+              <h3>Notifications</h3>
+
+              <p>
+                Important updates can keep users informed about orders,
+                approvals, clearances and other activities.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             FARMER BENEFITS
+             ===================================================== -->
+
+      <section class="farmer-benefits section-padding">
+        <div class="container">
+          <div class="benefits-layout">
+            <!-- BENEFITS CONTENT -->
+
+            <div class="benefits-content">
+              <span class="section-label"> Why Farmers Should Join </span>
+
+              <h2>More Visibility. Better Connections.</h2>
+
+              <p>
+                Selling farm products can be difficult when customers do not
+                know where to find you. FarmHub gives farmers a digital space to
+                present their farms and products to a wider marketplace.
+              </p>
+
+              <ul class="benefits-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span>
+                    Reach customers beyond your immediate local network.
+                  </span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span>
+                    Create a professional digital presence for your farm.
+                  </span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span> Showcase multiple products in one marketplace. </span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span>
+                    Manage products, inventory and orders more efficiently.
+                  </span>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span>
+                    Build customer trust through transparent farm information
+                    and applicable veterinary clearances.
+                  </span>
+                </li>
+              </ul>
+
+              <a href="register.html" class="btn btn-primary">
+                Register as a Farmer
+              </a>
+            </div>
+
+            <!-- BENEFITS IMAGE
+                         Use your own image.
+                    -->
+
+            <div class="benefits-image">
+              <img
+                src="../assets/images/farmer-benefits.jpg"
+                alt="Farmer managing agricultural products"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             TRUST SECTION
+             ===================================================== -->
+
+      <section class="trust-section section-padding">
+        <div class="container">
+          <div class="trust-content">
+            <span class="section-label"> Built Around Trust </span>
+
+            <h2>Connecting People With Confidence</h2>
+
+            <p>
+              FarmHub is designed to make agricultural commerce easier while
+              encouraging transparency between farmers, customers and veterinary
+              professionals.
+            </p>
+
+            <div class="trust-points">
+              <div class="trust-point">
+                <i class="fa-solid fa-shield-heart"></i>
+
+                <div>
+                  <h3>Trusted Farmers</h3>
+
+                  <p>
+                    Farmer profiles help customers understand who they are
+                    buying from.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trust-point">
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <div>
+                  <h3>Professional Veterinary Care</h3>
+
+                  <p>
+                    Veterinary professionals support animal health and
+                    applicable clearance processes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="trust-point">
+                <i class="fa-solid fa-comments"></i>
+
+                <div>
+                  <h3>Customer Feedback</h3>
+
+                  <p>
+                    Reviews give customers an opportunity to share their
+                    experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             CALL TO ACTION
+             ===================================================== -->
+
+      <section class="how-cta">
+        <div class="container">
+          <div class="cta-content">
+            <span class="section-label"> Start With FarmHub </span>
+
+            <h2>Ready to Connect With the Farm Marketplace?</h2>
+
+            <p>
+              Explore products from farmers, discover trusted farms or create
+              your own FarmHub account today.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="categories.html" class="btn btn-primary">
+                Browse Products
+              </a>
+
+              <a href="register.html" class="btn btn-outline">
+                Create Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- =========================================================
          FOOTER
          ========================================================= -->
 
     <footer class="site-footer">
-
-        <div class="container">
-
-            <div class="footer-content">
-
-
-                <!-- =================================================
+      <div class="container">
+        <div class="footer-content">
+          <!-- =================================================
                      FOOTER BRAND
                      ================================================= -->
 
-                <div>
+          <div>
+            <a href="index.html" class="logo footer-logo">
+              Farm<span>Hub</span>
+            </a>
 
-                    <a
-                        href="index.html"
-                        class="logo footer-logo"
-                    >
-                        Farm<span>Hub</span>
-                    </a>
+            <p>
+              Connecting trusted farms with customers through quality,
+              transparency and veterinary care.
+            </p>
+          </div>
 
-                    <p>
-                        Connecting trusted farms with
-                        customers through quality,
-                        transparency and veterinary care.
-                    </p>
-
-                </div>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      QUICK LINKS
                      ================================================= -->
 
-                <div>
+          <div>
+            <h3>Quick Links</h3>
 
-                    <h3>
-                        Quick Links
-                    </h3>
+            <a href="pages/products.html"> Products </a>
 
-                    <a href="pages/products.html">
-                        Products
-                    </a>
+            <a href="pages/farmers.html"> Farmers </a>
 
-                    <a href="pages/farmers.html">
-                        Farmers
-                    </a>
+            <a href="pages/veterinarians.html"> Veterinarians </a>
+          </div>
 
-                    <a href="pages/veterinarians.html">
-                        Veterinarians
-                    </a>
-
-                </div>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      SUPPORT
                      ================================================= -->
 
-                <div>
+          <div>
+            <h3>Support</h3>
 
-                    <h3>
-                        Support
-                    </h3>
+            <a href="pages/contact.html"> Contact </a>
 
-                    <a href="pages/contact.html">
-                        Contact
-                    </a>
+            <a href="pages/faq.html"> FAQ </a>
 
-                    <a href="pages/faq.html">
-                        FAQ
-                    </a>
+            <a href="#"> Privacy Policy </a>
+          </div>
+        </div>
 
-                    <a href="#">
-                        Privacy Policy
-                    </a>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- =================================================
+        <!-- =================================================
                  FOOTER BOTTOM
                  ================================================= -->
 
-            <div class="footer-bottom">
-
-                <p>
-                    &copy; 2026 FarmHub. All rights reserved.
-                </p>
-
-            </div>
-
+        <div class="footer-bottom">
+          <p>&copy; 2026 FarmHub. All rights reserved.</p>
         </div>
-
+      </div>
     </footer>
-
 
     <!-- =========================================================
          JAVASCRIPT
          ========================================================= -->
 
     <script src="js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
