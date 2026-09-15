@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Dashboard | FarmHub</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboards.css"
+    >
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="dashboard-sidebar">
+
+        <a
+            href="../index.html"
+            class="dashboard-logo"
+        >
+            Farm<span>Hub</span>
+        </a>
+
+
+        <nav class="dashboard-navigation">
+
+            <p class="nav-title">
+                MY ACCOUNT
+            </p>
+
+            <a
+                href="dashboard.html"
+                class="dashboard-nav-link active"
+            >
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </a>
+
+            <a href="orders.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-box"></i>
+                My Orders
+            </a>
+
+            <a href="cart.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </a>
+
+            <a href="wishlist.html" class="dashboard-nav-link">
+                <i class="fa-regular fa-heart"></i>
+                Wishlist
+            </a>
+
+            <a href="reviews.html" class="dashboard-nav-link">
+                <i class="fa-regular fa-star"></i>
+                Reviews
+            </a>
+
+            <a href="complaints.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                Complaints
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-sidebar-bottom">
+
+            <a
+                href="../pages/products.html"
+                class="dashboard-nav-link"
+            >
+                <i class="fa-solid fa-store"></i>
+                Marketplace
+            </a>
+
+            <button
+                type="button"
+                class="logout-button"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-topbar">
+
+            <div>
+
+                <span class="dashboard-label">
+                    CUSTOMER ACCOUNT
+                </span>
+
+                <h1>
+                    Welcome back!
+                </h1>
+
+            </div>
+
+
+            <div class="dashboard-profile">
+
+                <div class="profile-avatar">
+                    U
+                </div>
+
+                <div>
+
+                    <strong
+                        id="dashboardUserName"
+                    >
+                        FarmHub User
+                    </strong>
+
+                    <small>
+                        Customer
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             STATISTICS
+             ================================================= -->
+
+        <section class="dashboard-stats">
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Orders
+                    </span>
+
+                    <strong>
+                        24
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Active Orders
+                    </span>
+
+                    <strong>
+                        3
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Wishlist
+                    </span>
+
+                    <strong>
+                        8
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Spent
+                    </span>
+
+                    <strong>
+                        KSh 18,450
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
+
+        <section class="dashboard-content-grid">
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Recent Orders
+                    </h2>
+
+                    <a href="orders.html">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-table-wrapper">
+
+                    <table class="dashboard-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Order</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    #FH-10482
+                                </td>
+
+                                <td>
+                                    12 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+
+                                <td>
+                                    KSh 2,450
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    #FH-10479
+                                </td>
+
+                                <td>
+                                    10 Sep 2026
+                                </td>
+
+                                <td>
+                                    <span class="status processing">
+                                        Processing
+                                    </span>
+                                </td>
+
+                                <td>
+                                    KSh 3,200
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a href="../pages/products.html">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Shop Products</span>
+                    </a>
+
+                    <a href="orders.html">
+                        <i class="fa-solid fa-box"></i>
+                        <span>Track Orders</span>
+                    </a>
+
+                    <a href="wishlist.html">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>Wishlist</span>
+                    </a>
+
+                    <a href="reviews.html">
+                        <i class="fa-regular fa-star"></i>
+                        <span>Leave Review</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/dashboards.js"></script>
+
+</body>
+
+</html>

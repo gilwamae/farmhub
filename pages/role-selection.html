@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Select Account Type | FarmHub</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/auth.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+<header class="auth-header">
+
+    <div class="auth-header-container">
+
+        <a
+            href="../index.html"
+            class="auth-logo"
+        >
+            Farm<span>Hub</span>
+        </a>
+
+        <a
+            href="login.html"
+            class="auth-header-link"
+        >
+            Already registered?
+            <strong>Login</strong>
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="auth-main">
+
+    <div class="role-container">
+
+
+        <div class="auth-heading">
+
+            <div class="auth-icon">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <h1>Choose Your Account Type</h1>
+
+            <p>
+                Select the FarmHub experience that
+                matches what you want to do.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             ROLE CARDS
+             ===================================================== -->
+
+        <div class="role-grid">
+
+
+            <!-- Customer -->
+
+            <button
+                type="button"
+                class="role-card"
+                data-role="user"
+            >
+
+                <div class="role-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <h2>Customer</h2>
+
+                <p>
+                    Browse and purchase fresh products
+                    from trusted farmers.
+                </p>
+
+                <span class="role-action">
+                    Continue
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- Farmer -->
+
+            <button
+                type="button"
+                class="role-card"
+                data-role="farmer"
+            >
+
+                <div class="role-icon">
+
+                    <i class="fa-solid fa-tractor"></i>
+
+                </div>
+
+                <h2>Farmer</h2>
+
+                <p>
+                    Manage your farm, animals, products,
+                    inventory and sales.
+                </p>
+
+                <span class="role-action">
+                    Continue
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </button>
+
+
+            <!-- Veterinarian -->
+
+            <button
+                type="button"
+                class="role-card"
+                data-role="vet"
+            >
+
+                <div class="role-icon">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                </div>
+
+                <h2>Veterinarian</h2>
+
+                <p>
+                    Manage animal health, examinations,
+                    recommendations and clearances.
+                </p>
+
+                <span class="role-action">
+                    Continue
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+        <div class="role-note">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <p>
+                Administrator accounts are managed
+                securely by FarmHub.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="../js/auth.js"></script>
+
+</body>
+
+</html>

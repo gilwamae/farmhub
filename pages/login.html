@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | FarmHub</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+         ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         FARMHUB GLOBAL CSS
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Authentication-specific styles -->
+
+    <link
+        rel="stylesheet"
+        href="../css/auth.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- =========================================================
+         AUTHENTICATION HEADER
+         ========================================================= -->
+
+    <header class="auth-header">
+
+        <div class="auth-header-container">
+
+            <a
+                href="../index.html"
+                class="auth-logo"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+            <a
+                href="register.html"
+                class="auth-header-link"
+            >
+                Don't have an account?
+                <strong>Register</strong>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         LOGIN SECTION
+         ========================================================= -->
+
+    <main class="auth-main">
+
+        <div class="auth-container">
+
+
+            <!-- =================================================
+                 LOGIN CARD
+                 ================================================= -->
+
+            <div class="auth-card">
+
+
+                <div class="auth-heading">
+
+                    <div class="auth-icon">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+
+                    <h1>Welcome Back</h1>
+
+                    <p>
+                        Login to your FarmHub account
+                        and continue managing your farm,
+                        orders and services.
+                    </p>
+
+                </div>
+
+
+                <!-- =============================================
+                     LOGIN FORM
+                     ============================================= -->
+
+                <form
+                    id="loginForm"
+                    class="auth-form"
+                    novalidate
+                >
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                        <small
+                            class="form-error"
+                            id="loginEmailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="form-label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <a href="#">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="loginPassword"
+                                aria-label="Show password"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="form-error"
+                            id="loginPasswordError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Remember me -->
+
+                    <div class="form-checkbox">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login button -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+
+                        <span>Login</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- Demo note -->
+
+                    <div class="demo-login">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <span>
+                            Frontend demo: choose your role
+                            after registration.
+                        </span>
+
+                    </div>
+
+                </form>
+
+
+                <!-- Registration link -->
+
+                <div class="auth-footer">
+
+                    <p>
+                        Don't have a FarmHub account?
+                        <a href="register.html">
+                            Create an account
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/auth.js"></script>
+
+</body>
+
+</html>

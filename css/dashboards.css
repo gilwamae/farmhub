@@ -1,0 +1,826 @@
+/* ============================================================
+   FARMHUB DASHBOARD SYSTEM
+   ============================================================ */
+
+
+/* ============================================================
+   1. DASHBOARD PAGE
+   ============================================================ */
+
+.dashboard-page {
+
+    min-height: 100vh;
+
+    background: #f6f7f3;
+
+    color: var(--text-dark);
+
+}
+
+
+/* ============================================================
+   2. MAIN LAYOUT
+   ============================================================ */
+
+.dashboard-layout {
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+/* ============================================================
+   3. SIDEBAR
+   ============================================================ */
+
+.dashboard-sidebar {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 250px;
+
+    height: 100vh;
+
+    padding: 25px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--dark-green);
+
+    overflow-y: auto;
+
+    z-index: 100;
+
+}
+
+
+.dashboard-logo {
+
+    padding: 0 12px 28px;
+
+    color: var(--white);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+.dashboard-logo span {
+
+    color: var(--orange);
+
+}
+
+
+/* ============================================================
+   4. NAVIGATION
+   ============================================================ */
+
+.dashboard-navigation {
+
+    flex: 1;
+
+}
+
+
+.nav-title {
+
+    margin: 20px 12px 9px;
+
+    color: rgba(255,255,255,.45);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+
+.dashboard-nav-link {
+
+    min-height: 43px;
+
+    margin-bottom: 4px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 7px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+.dashboard-nav-link i {
+
+    width: 17px;
+
+    text-align: center;
+
+}
+
+
+.dashboard-nav-link:hover {
+
+    background: rgba(255,255,255,.08);
+
+    color: var(--white);
+
+}
+
+
+.dashboard-nav-link.active {
+
+    background: rgba(255,255,255,.13);
+
+    color: var(--white);
+
+}
+
+
+/* ============================================================
+   5. SIDEBAR BOTTOM
+   ============================================================ */
+
+.dashboard-sidebar-bottom {
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+}
+
+
+.logout-button {
+
+    width: 100%;
+
+    min-height: 43px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: rgba(255,255,255,.7);
+
+    font-family: var(--font-primary);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+.logout-button:hover {
+
+    background: rgba(255,255,255,.08);
+
+    color: var(--white);
+
+}
+
+
+/* ============================================================
+   6. MAIN CONTENT
+   ============================================================ */
+
+.dashboard-main {
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    margin-left: 250px;
+
+    padding: 30px;
+
+}
+
+
+/* ============================================================
+   7. TOP BAR
+   ============================================================ */
+
+.dashboard-topbar {
+
+    min-height: 70px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.dashboard-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--orange);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.dashboard-topbar h1 {
+
+    margin: 0;
+
+    color: var(--primary-green);
+
+    font-size: 26px;
+
+}
+
+
+/* ============================================================
+   8. PROFILE
+   ============================================================ */
+
+.dashboard-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.dashboard-profile strong {
+
+    display: block;
+
+    font-size: 12px;
+
+}
+
+
+.dashboard-profile small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+}
+
+
+.profile-avatar {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    color: var(--primary-green);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* ============================================================
+   9. STATISTICS
+   ============================================================ */
+
+.dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.stat-card {
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background: var(--white);
+
+}
+
+
+.stat-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--light-green);
+
+    color: var(--primary-green);
+
+}
+
+
+.stat-card span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+}
+
+
+.stat-card strong {
+
+    color: var(--primary-green);
+
+    font-size: 19px;
+
+}
+
+
+/* ============================================================
+   10. CONTENT GRID
+   ============================================================ */
+
+.dashboard-content-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(260px, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* ============================================================
+   11. PANEL
+   ============================================================ */
+
+.dashboard-panel {
+
+    min-width: 0;
+
+    padding: 22px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background: var(--white);
+
+}
+
+
+.panel-header {
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.panel-header h2 {
+
+    margin: 0;
+
+    color: var(--primary-green);
+
+    font-size: 15px;
+
+}
+
+
+.panel-header a {
+
+    color: var(--primary-green);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+/* ============================================================
+   12. TABLE
+   ============================================================ */
+
+.dashboard-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.dashboard-table {
+
+    width: 100%;
+
+    min-width: 500px;
+
+    border-collapse: collapse;
+
+}
+
+
+.dashboard-table th {
+
+    padding: 11px;
+
+    background: #f7f8f4;
+
+    color: var(--text-light);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+}
+
+
+.dashboard-table td {
+
+    padding: 13px 11px;
+
+    border-bottom: 1px solid #eeeeea;
+
+    color: var(--text-dark);
+
+    font-size: 10px;
+
+}
+
+
+.dashboard-table tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+/* ============================================================
+   13. STATUS
+   ============================================================ */
+
+.status {
+
+    display: inline-flex;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+}
+
+
+.status.delivered {
+
+    background: #e8f5e9;
+
+    color: #28743c;
+
+}
+
+
+.status.processing {
+
+    background: #fff3e0;
+
+    color: #a65d00;
+
+}
+
+
+.status.pending {
+
+    background: #fff3e0;
+
+    color: #a65d00;
+
+}
+
+
+/* ============================================================
+   14. QUICK ACTIONS
+   ============================================================ */
+
+.quick-actions {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.quick-actions a {
+
+    min-height: 75px;
+
+    padding: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px;
+
+    color: var(--text-dark);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+.quick-actions a:hover {
+
+    border-color: var(--primary-green);
+
+    color: var(--primary-green);
+
+}
+
+
+.quick-actions i {
+
+    color: var(--primary-green);
+
+    font-size: 15px;
+
+}
+
+
+.quick-actions span {
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+}
+
+
+/* ============================================================
+   15. TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .dashboard-sidebar {
+
+        width: 220px;
+
+    }
+
+
+    .dashboard-main {
+
+        width: calc(100% - 220px);
+
+        margin-left: 220px;
+
+        padding: 25px;
+
+    }
+
+
+    .dashboard-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .dashboard-content-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* ============================================================
+   16. MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .dashboard-layout {
+
+        display: block;
+
+    }
+
+
+    .dashboard-sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+
+    }
+
+
+    .dashboard-navigation {
+
+        display: none;
+
+    }
+
+
+    .dashboard-sidebar-bottom {
+
+        display: none;
+
+    }
+
+
+    .dashboard-main {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .dashboard-topbar {
+
+        align-items: flex-start;
+
+    }
+
+
+    .dashboard-topbar h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .dashboard-profile {
+
+        display: none;
+
+    }
+
+
+    .dashboard-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .dashboard-panel {
+
+        padding: 16px;
+
+    }
+
+
+    .quick-actions {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

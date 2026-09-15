@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Veterinarian Dashboard | FarmHub</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboards.css"
+    >
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<div class="dashboard-layout">
+
+
+    <aside class="dashboard-sidebar">
+
+        <a
+            href="../index.html"
+            class="dashboard-logo"
+        >
+            Farm<span>Hub</span>
+        </a>
+
+
+        <nav class="dashboard-navigation">
+
+            <p class="nav-title">
+                VETERINARY MANAGEMENT
+            </p>
+
+            <a
+                href="dashboard.html"
+                class="dashboard-nav-link active"
+            >
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </a>
+
+            <a href="farms.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-house"></i>
+                Assigned Farms
+            </a>
+
+            <a href="animals.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-cow"></i>
+                Animals
+            </a>
+
+            <a href="health-records.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-notes-medical"></i>
+                Health Records
+            </a>
+
+            <a href="examination.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-stethoscope"></i>
+                Examinations
+            </a>
+
+            <a href="clearances.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-file-circle-check"></i>
+                Clearances
+            </a>
+
+            <a href="recommendations.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-clipboard-list"></i>
+                Recommendations
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-sidebar-bottom">
+
+            <button
+                type="button"
+                class="logout-button"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-topbar">
+
+            <div>
+
+                <span class="dashboard-label">
+                    VETERINARIAN ACCOUNT
+                </span>
+
+                <h1>
+                    Veterinary Overview
+                </h1>
+
+            </div>
+
+
+            <div class="dashboard-profile">
+
+                <div class="profile-avatar">
+                    V
+                </div>
+
+                <div>
+
+                    <strong>
+                        Dr. Veterinarian
+                    </strong>
+
+                    <small>
+                        Veterinarian
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="dashboard-stats">
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Assigned Farms
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-cow"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Animals
+                    </span>
+
+                    <strong>
+                        326
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending Clearances
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Examinations
+                    </span>
+
+                    <strong>
+                        9
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <section class="dashboard-content-grid">
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Pending Clearances
+                    </h2>
+
+                    <a href="clearances.html">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-table-wrapper">
+
+                    <table class="dashboard-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Farmer</th>
+                                <th>Animal</th>
+                                <th>Request</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    James Mwangi
+                                </td>
+
+                                <td>
+                                    Dairy Cow #A102
+                                </td>
+
+                                <td>
+                                    Breeding
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Mary Wanjiku
+                                </td>
+
+                                <td>
+                                    Goat #A221
+                                </td>
+
+                                <td>
+                                    Product
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Veterinary Actions
+                    </h2>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a href="examination.html">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>New Examination</span>
+                    </a>
+
+                    <a href="clearances.html">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        <span>Review Clearances</span>
+                    </a>
+
+                    <a href="recommendations.html">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span>Add Recommendation</span>
+                    </a>
+
+                    <a href="animals.html">
+                        <i class="fa-solid fa-cow"></i>
+                        <span>View Animals</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/dashboards.js"></script>
+
+</body>
+
+</html>

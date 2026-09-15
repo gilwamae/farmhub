@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         BASIC DOCUMENT SETTINGS
+         ========================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="FarmHub Administrator Dashboard - Comprehensive farm marketplace management system."
+    >
+
+    <title>Admin Dashboard | FarmHub</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+         ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+         Used for dashboard icons
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         DASHBOARD CSS
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body class="admin-dashboard">
+
+
+<!-- =============================================================
+     ADMIN APPLICATION
+     ============================================================= -->
+
+<div class="admin-layout">
+
+
+    <!-- =========================================================
+         SIDEBAR
+         ========================================================= -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+
+        <!-- -----------------------------------------------------
+             SIDEBAR LOGO
+             ----------------------------------------------------- -->
+
+        <div class="sidebar-header">
+
+            <a
+                href="dashboard.html"
+                class="sidebar-logo"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close navigation"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- -----------------------------------------------------
+             ADMIN PROFILE
+             ----------------------------------------------------- -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div class="admin-profile-info">
+
+                <strong>System Administrator</strong>
+
+                <span>Administrator</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+             ===================================================== -->
+
+        <nav
+            class="sidebar-navigation"
+            aria-label="Administrator navigation"
+        >
+
+
+            <!-- -------------------------------------------------
+                 MAIN
+                 ------------------------------------------------- -->
+
+            <div class="nav-section">
+
+                <p class="nav-section-title">
+                    Main
+                </p>
+
+                <a
+                    href="dashboard.html"
+                    class="nav-link active"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <!-- -------------------------------------------------
+                 USER MANAGEMENT
+                 ------------------------------------------------- -->
+
+            <div class="nav-section">
+
+                <p class="nav-section-title">
+                    User Management
+                </p>
+
+                <a
+                    href="users.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </span>
+
+                    <span>Users</span>
+                </a>
+
+
+                <a
+                    href="farmers.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-tractor"></i>
+                    </span>
+
+                    <span>Farmers</span>
+                </a>
+
+
+                <a
+                    href="veterinarians.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </span>
+
+                    <span>Veterinarians</span>
+                </a>
+
+
+                <a
+                    href="farms.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    <span>Farms</span>
+                </a>
+
+            </div>
+
+
+            <!-- -------------------------------------------------
+                 FARM & ANIMAL MANAGEMENT
+                 ------------------------------------------------- -->
+
+            <div class="nav-section">
+
+                <p class="nav-section-title">
+                    Farm Management
+                </p>
+
+
+                <a
+                    href="animals.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-cow"></i>
+                    </span>
+
+                    <span>Animals</span>
+                </a>
+
+
+                <a
+                    href="products.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </span>
+
+                    <span>Products</span>
+                </a>
+
+
+                <a
+                    href="clearances.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </span>
+
+                    <span>Vet Clearances</span>
+
+                    <span class="nav-badge">
+                        18
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- -------------------------------------------------
+                 MARKETPLACE
+                 ------------------------------------------------- -->
+
+            <div class="nav-section">
+
+                <p class="nav-section-title">
+                    Marketplace
+                </p>
+
+
+                <a
+                    href="orders.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </span>
+
+                    <span>Orders</span>
+
+                    <span class="nav-badge">
+                        24
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="payments.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </span>
+
+                    <span>Payments</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- -------------------------------------------------
+                 PLATFORM MANAGEMENT
+                 ------------------------------------------------- -->
+
+            <div class="nav-section">
+
+                <p class="nav-section-title">
+                    Platform
+                </p>
+
+
+                <a
+                    href="reports.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </span>
+
+                    <span>Reports</span>
+                </a>
+
+
+                <a
+                    href="complaints.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </span>
+
+                    <span>Complaints</span>
+
+                    <span class="nav-badge warning">
+                        7
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="reviews.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span>Reviews</span>
+                </a>
+
+
+                <a
+                    href="training.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+
+                    <span>Training</span>
+                </a>
+
+
+                <a
+                    href="notifications.html"
+                    class="nav-link"
+                >
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </span>
+
+                    <span>Notifications</span>
+
+                    <span class="nav-badge danger">
+                        5
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+             ===================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="settings.html"
+                class="nav-link"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="logout-button"
+                id="logoutButton"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </span>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         SIDEBAR OVERLAY
+         ========================================================= -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         MAIN CONTENT AREA
+         ========================================================= -->
+
+    <main class="admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+             ===================================================== -->
+
+        <header class="admin-topbar">
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+
+            <div class="topbar-heading">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Welcome back, Administrator.
+                </p>
+
+            </div>
+
+
+            <!-- Topbar Actions -->
+
+            <div class="topbar-actions">
+
+
+                <!-- Search -->
+
+                <button
+                    type="button"
+                    class="topbar-icon-button"
+                    aria-label="Search"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <!-- Notifications -->
+
+                <a
+                    href="notifications.html"
+                    class="topbar-icon-button notification-button"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </a>
+
+
+                <!-- Administrator -->
+
+                <div class="topbar-user">
+
+                    <div class="topbar-avatar">
+                        SA
+                    </div>
+
+                    <div class="topbar-user-info">
+
+                        <strong>
+                            System Admin
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <div class="admin-content">
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+                 ================================================= -->
+
+            <section class="dashboard-welcome">
+
+                <div>
+
+                    <span class="eyebrow">
+                        FARMHUB ADMINISTRATION
+                    </span>
+
+                    <h2>
+                        Platform Overview
+                    </h2>
+
+                    <p>
+                        Monitor users, farms, animals, marketplace
+                        activity, payments and veterinary operations
+                        from one central management system.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-actions">
+
+                    <a
+                        href="users.html"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-solid fa-user-plus"></i>
+                        Add User
+                    </a>
+
+                    <a
+                        href="reports.html"
+                        class="btn btn-outline"
+                    >
+                        <i class="fa-solid fa-chart-column"></i>
+                        View Reports
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <section class="stats-grid">
+
+
+                <!-- Users -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Users
+                        </span>
+
+                        <strong>
+                            12,482
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.4% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Farmers -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Registered Farmers
+                        </span>
+
+                        <strong>
+                            2,846
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            5.7% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Veterinarians -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Veterinarians
+                        </span>
+
+                        <strong>
+                            184
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            3.2% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Products -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Active Products
+                        </span>
+
+                        <strong>
+                            8,724
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            11.3% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Orders -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon teal">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Total Orders
+                        </span>
+
+                        <strong>
+                            34,928
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            9.8% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Revenue -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon dark">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Platform Revenue
+                        </span>
+
+                        <strong>
+                            KSh 18.6M
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.6% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Clearances -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Pending Clearances
+                        </span>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <small class="negative">
+                            Requires attention
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Complaints -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon yellow">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Open Complaints
+                        </span>
+
+                        <strong>
+                            7
+                        </strong>
+
+                        <small class="negative">
+                            Requires attention
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 MAIN DASHBOARD GRID
+                 ================================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- =============================================
+                     SALES OVERVIEW
+                     ============================================= -->
+
+                <article class="dashboard-card sales-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Marketplace Overview
+                            </h3>
+
+                            <p>
+                                Order and revenue performance
+                            </p>
+
+                        </div>
+
+
+                        <select
+                            class="card-select"
+                            id="salesPeriod"
+                        >
+
+                            <option value="7">
+                                Last 7 days
+                            </option>
+
+                            <option value="30" selected>
+                                Last 30 days
+                            </option>
+
+                            <option value="90">
+                                Last 90 days
+                            </option>
+
+                            <option value="365">
+                                This year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Chart -->
+
+                    <div class="chart-container">
+
+                        <div class="chart-summary">
+
+                            <div>
+
+                                <span>
+                                    Total Revenue
+                                </span>
+
+                                <strong>
+                                    KSh 3.84M
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Orders
+                                </span>
+
+                                <strong>
+                                    4,286
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="fake-chart">
+
+                            <div class="chart-grid-line"></div>
+                            <div class="chart-grid-line"></div>
+                            <div class="chart-grid-line"></div>
+                            <div class="chart-grid-line"></div>
+
+
+                            <div class="chart-bars">
+
+                                <div class="chart-bar" style="height:45%;">
+                                    <span>1</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:58%;">
+                                    <span>2</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:42%;">
+                                    <span>3</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:68%;">
+                                    <span>4</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:55%;">
+                                    <span>5</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:76%;">
+                                    <span>6</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:63%;">
+                                    <span>7</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:82%;">
+                                    <span>8</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:72%;">
+                                    <span>9</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:91%;">
+                                    <span>10</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:78%;">
+                                    <span>11</span>
+                                </div>
+
+                                <div class="chart-bar" style="height:88%;">
+                                    <span>12</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =============================================
+                     PLATFORM DISTRIBUTION
+                     ============================================= -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                User Distribution
+                            </h3>
+
+                            <p>
+                                Users by account type
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-list">
+
+
+                        <div class="distribution-item">
+
+                            <div class="distribution-label">
+
+                                <span class="distribution-dot green"></span>
+
+                                <span>
+                                    Customers
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                72%
+                            </strong>
+
+                        </div>
+
+                        <div class="distribution-progress">
+
+                            <span style="width:72%;"></span>
+
+                        </div>
+
+
+                        <div class="distribution-item">
+
+                            <div class="distribution-label">
+
+                                <span class="distribution-dot orange"></span>
+
+                                <span>
+                                    Farmers
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                19%
+                            </strong>
+
+                        </div>
+
+                        <div class="distribution-progress">
+
+                            <span style="width:19%;"></span>
+
+                        </div>
+
+
+                        <div class="distribution-item">
+
+                            <div class="distribution-label">
+
+                                <span class="distribution-dot blue"></span>
+
+                                <span>
+                                    Veterinarians
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                7%
+                            </strong>
+
+                        </div>
+
+                        <div class="distribution-progress">
+
+                            <span style="width:7%;"></span>
+
+                        </div>
+
+
+                        <div class="distribution-item">
+
+                            <div class="distribution-label">
+
+                                <span class="distribution-dot purple"></span>
+
+                                <span>
+                                    Administrators
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                2%
+                            </strong>
+
+                        </div>
+
+                        <div class="distribution-progress">
+
+                            <span style="width:2%;"></span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 MANAGEMENT OVERVIEW
+                 ================================================= -->
+
+            <section class="management-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Management Overview
+                        </h2>
+
+                        <p>
+                            Areas requiring administrator attention
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="management-grid">
+
+
+                    <!-- Vet Clearances -->
+
+                    <a
+                        href="clearances.html"
+                        class="management-card"
+                    >
+
+                        <div class="management-icon green">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Vet Clearances
+                            </strong>
+
+                            <span>
+                                18 pending reviews
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </a>
+
+
+                    <!-- Farmer Approvals -->
+
+                    <a
+                        href="farmers.html"
+                        class="management-card"
+                    >
+
+                        <div class="management-icon orange">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Farmer Approvals
+                            </strong>
+
+                            <span>
+                                12 applications
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </a>
+
+
+                    <!-- Vet Approvals -->
+
+                    <a
+                        href="veterinarians.html"
+                        class="management-card"
+                    >
+
+                        <div class="management-icon blue">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Vet Approvals
+                            </strong>
+
+                            <span>
+                                4 applications
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </a>
+
+
+                    <!-- Complaints -->
+
+                    <a
+                        href="complaints.html"
+                        class="management-card"
+                    >
+
+                        <div class="management-icon red">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Complaints
+                            </strong>
+
+                            <span>
+                                7 unresolved cases
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RECENT ORDERS
+                 ================================================= -->
+
+            <section class="dashboard-card table-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Recent Orders
+                        </h3>
+
+                        <p>
+                            Latest marketplace transactions
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="orders.html"
+                        class="view-all"
+                    >
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Order ID
+                                </th>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    Farmer
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #FH-10482
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    James Mwangi
+                                </td>
+
+                                <td>
+                                    Green Valley Farm
+                                </td>
+
+                                <td>
+                                    KSh 8,450
+                                </td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    15 Sep 2026
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="orders.html"
+                                        class="table-action"
+                                        aria-label="View order"
+                                    >
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #FH-10481
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Grace Wanjiku
+                                </td>
+
+                                <td>
+                                    Sunrise Dairy
+                                </td>
+
+                                <td>
+                                    KSh 4,280
+                                </td>
+
+                                <td>
+                                    <span class="status processing">
+                                        Processing
+                                    </span>
+                                </td>
+
+                                <td>
+                                    15 Sep 2026
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="orders.html"
+                                        class="table-action"
+                                        aria-label="View order"
+                                    >
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #FH-10480
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Brian Otieno
+                                </td>
+
+                                <td>
+                                    Fresh Fields Farm
+                                </td>
+
+                                <td>
+                                    KSh 12,600
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    14 Sep 2026
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="orders.html"
+                                        class="table-action"
+                                        aria-label="View order"
+                                    >
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #FH-10479
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Mary Njeri
+                                </td>
+
+                                <td>
+                                    Highland Poultry
+                                </td>
+
+                                <td>
+                                    KSh 6,750
+                                </td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    14 Sep 2026
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="orders.html"
+                                        class="table-action"
+                                        aria-label="View order"
+                                    >
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BOTTOM DASHBOARD
+                 ================================================= -->
+
+            <section class="dashboard-bottom-grid">
+
+
+                <!-- =============================================
+                     RECENT USERS
+                     ============================================= -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Recent Users
+                            </h3>
+
+                            <p>
+                                Recently registered accounts
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="users.html"
+                            class="view-all"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="user-list">
+
+
+                        <div class="user-list-item">
+
+                            <div class="user-small-avatar">
+                                JM
+                            </div>
+
+                            <div class="user-list-info">
+
+                                <strong>
+                                    James Mwangi
+                                </strong>
+
+                                <span>
+                                    Farmer · Today
+                                </span>
+
+                            </div>
+
+                            <span class="status active">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-list-item">
+
+                            <div class="user-small-avatar">
+                                GW
+                            </div>
+
+                            <div class="user-list-info">
+
+                                <strong>
+                                    Grace Wanjiku
+                                </strong>
+
+                                <span>
+                                    Customer · Today
+                                </span>
+
+                            </div>
+
+                            <span class="status active">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-list-item">
+
+                            <div class="user-small-avatar">
+                                BO
+                            </div>
+
+                            <div class="user-list-info">
+
+                                <strong>
+                                    Brian Otieno
+                                </strong>
+
+                                <span>
+                                    Farmer · Yesterday
+                                </span>
+
+                            </div>
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-list-item">
+
+                            <div class="user-small-avatar">
+                                AN
+                            </div>
+
+                            <div class="user-list-info">
+
+                                <strong>
+                                    Alice Njeri
+                                </strong>
+
+                                <span>
+                                    Veterinarian · Yesterday
+                                </span>
+
+                            </div>
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =============================================
+                     SYSTEM ACTIVITY
+                     ============================================= -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                System Activity
+                            </h3>
+
+                            <p>
+                                Latest administrator events
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon green">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Farmer approved
+                                </strong>
+
+                                <p>
+                                    Green Valley Farm was approved.
+                                </p>
+
+                                <span>
+                                    12 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon blue">
+                                <i class="fa-solid fa-file-circle-check"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Vet clearance submitted
+                                </strong>
+
+                                <p>
+                                    Animal clearance requires review.
+                                </p>
+
+                                <span>
+                                    28 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon orange">
+                                <i class="fa-solid fa-box"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New products added
+                                </strong>
+
+                                <p>
+                                    14 products added to marketplace.
+                                </p>
+
+                                <span>
+                                    1 hour ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon red">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Complaint received
+                                </strong>
+
+                                <p>
+                                    A customer submitted a complaint.
+                                </p>
+
+                                <span>
+                                    2 hours ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =============================================================
+     JAVASCRIPT
+     ============================================================= -->
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

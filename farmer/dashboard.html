@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Farmer Dashboard | FarmHub</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboards.css"
+    >
+
+</head>
+
+
+<body class="dashboard-page">
+
+<div class="dashboard-layout">
+
+
+    <aside class="dashboard-sidebar">
+
+        <a
+            href="../index.html"
+            class="dashboard-logo"
+        >
+            Farm<span>Hub</span>
+        </a>
+
+
+        <nav class="dashboard-navigation">
+
+            <p class="nav-title">
+                FARM MANAGEMENT
+            </p>
+
+            <a
+                href="dashboard.html"
+                class="dashboard-nav-link active"
+            >
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+            </a>
+
+            <a href="farm.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-house"></i>
+                My Farm
+            </a>
+
+            <a href="animals.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-cow"></i>
+                Animals
+            </a>
+
+            <a href="products.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-box-open"></i>
+                Products
+            </a>
+
+            <a href="inventory.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-warehouse"></i>
+                Inventory
+            </a>
+
+            <a href="orders.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Orders
+            </a>
+
+            <a href="sales.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-chart-line"></i>
+                Sales
+            </a>
+
+            <p class="nav-title">
+                VETERINARY
+            </p>
+
+            <a href="clearances.html" class="dashboard-nav-link">
+                <i class="fa-solid fa-shield-heart"></i>
+                Vet Clearances
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-sidebar-bottom">
+
+            <button
+                type="button"
+                class="logout-button"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-topbar">
+
+            <div>
+
+                <span class="dashboard-label">
+                    FARMER ACCOUNT
+                </span>
+
+                <h1>
+                    Farm Overview
+                </h1>
+
+            </div>
+
+
+            <div class="dashboard-profile">
+
+                <div class="profile-avatar">
+                    F
+                </div>
+
+                <div>
+
+                    <strong>
+                        Farmer Account
+                    </strong>
+
+                    <small>
+                        Farmer
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             FARMER STATS
+             ================================================= -->
+
+        <section class="dashboard-stats">
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-cow"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Animals
+                    </span>
+
+                    <strong>
+                        48
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Products
+                    </span>
+
+                    <strong>
+                        26
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending Orders
+                    </span>
+
+                    <strong>
+                        7
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Monthly Sales
+                    </span>
+
+                    <strong>
+                        KSh 84,600
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <section class="dashboard-content-grid">
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Recent Orders
+                    </h2>
+
+                    <a href="orders.html">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-table-wrapper">
+
+                    <table class="dashboard-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Order</th>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>#FH-10492</td>
+
+                                <td>Fresh Milk</td>
+
+                                <td>10 Litres</td>
+
+                                <td>
+                                    <span class="status processing">
+                                        Processing
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>#FH-10487</td>
+
+                                <td>Farm Eggs</td>
+
+                                <td>5 Trays</td>
+
+                                <td>
+                                    <span class="status delivered">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        Farm Actions
+                    </h2>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a href="add-product.html">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Add Product</span>
+                    </a>
+
+                    <a href="animals.html">
+                        <i class="fa-solid fa-cow"></i>
+                        <span>Manage Animals</span>
+                    </a>
+
+                    <a href="request-clearance.html">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        <span>Request Clearance</span>
+                    </a>
+
+                    <a href="inventory.html">
+                        <i class="fa-solid fa-warehouse"></i>
+                        <span>Check Inventory</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/dashboards.js"></script>
+
+</body>
+
+</html>

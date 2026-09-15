@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         BASIC DOCUMENT SETTINGS
+         ========================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Discover trusted farmers on FarmHub and explore fresh, quality farm products from verified farms."
+    >
+
+    <title>Farmers | FarmHub</title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+         ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+         Used for small interface icons
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         MAIN SITE STYLES
+         Reuses the existing FarmHub global styles
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- =========================================================
+         PUBLIC PAGE STYLES
+         Styles specifically for public informational pages
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/public-pages.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER / NAVIGATION
+         ========================================================= -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+
+            <!-- =========================
+                 FARMHUB LOGO
+                 ========================= -->
+
+            <a
+                href="../index.html"
+                class="logo"
+                aria-label="FarmHub Home"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+
+            <!-- =========================
+                 MAIN NAVIGATION
+                 ========================= -->
+
+            <nav
+                class="main-navigation"
+                id="mainNavigation"
+                aria-label="Main navigation"
+            >
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="products.html"
+                    class="nav-link"
+                >
+                    Products
+                </a>
+
+                <a
+                    href="farmers.html"
+                    class="nav-link active"
+                >
+                    Farmers
+                </a>
+
+                <a
+                    href="veterinarians.html"
+                    class="nav-link"
+                >
+                    Veterinarians
+                </a>
+
+                <a
+                    href="training.html"
+                    class="nav-link"
+                >
+                    Animal Training
+                </a>
+
+                <a
+                    href="about.html"
+                    class="nav-link"
+                >
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- =========================
+                 HEADER ACTIONS
+                 ========================= -->
+
+            <div class="header-actions">
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="role-selection.html"
+                    class="btn btn-primary"
+                >
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 MOBILE MENU BUTTON
+                 ========================= -->
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+         ========================================================= -->
+
+    <main>
+
+
+        <!-- =====================================================
+             FARMERS HERO SECTION
+             ===================================================== -->
+
+        <section class="page-hero farmers-hero">
+
+            <div class="container page-hero-content">
+
+
+                <!-- =========================
+                     HERO TEXT
+                     ========================= -->
+
+                <div class="page-hero-text">
+
+                    <span class="eyebrow">
+                        Trusted Farm Partners
+                    </span>
+
+                    <h1>
+                        Meet the Farmers Behind Your Food
+                    </h1>
+
+                    <p>
+                        Discover verified farmers, explore their farms,
+                        and connect with trusted producers supplying
+                        fresh and quality farm products through FarmHub.
+                    </p>
+
+
+                    <!-- =========================
+                         HERO ACTIONS
+                         ========================= -->
+
+                    <div class="page-hero-actions">
+
+                        <a
+                            href="products.html"
+                            class="btn btn-primary"
+                        >
+                            Explore Products
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a
+                            href="#farmers"
+                            class="btn btn-outline"
+                        >
+                            Meet Our Farmers
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     HERO IMAGE
+                     
+                     SUPPLY THIS IMAGE:
+                     assets/images/farmers/farmers-hero.jpg
+                     ========================= -->
+
+                <div class="page-hero-image">
+
+                    <img
+                        src="../assets/images/farmers/farmers-hero.jpg"
+                        alt="Farmer working on a farm"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INTRODUCTION
+             ===================================================== -->
+
+        <section class="page-intro section-padding">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="eyebrow">
+                        Our Farming Community
+                    </span>
+
+                    <h2>
+                        Connecting You With Trusted Producers
+                    </h2>
+
+                    <p>
+                        FarmHub brings farmers and customers together
+                        through a trusted marketplace designed to make
+                        farm products easier to discover and purchase.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     INTRO FEATURES
+                     ========================= -->
+
+                <div class="feature-grid">
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <h3>
+                            Verified Farmers
+                        </h3>
+
+                        <p>
+                            Farmers can go through a verification process
+                            before participating in the FarmHub marketplace.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <h3>
+                            Quality Products
+                        </h3>
+
+                        <p>
+                            Discover farm products supplied directly by
+                            producers participating in the platform.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+
+                        <h3>
+                            Direct Connections
+                        </h3>
+
+                        <p>
+                            FarmHub helps customers discover the people
+                            and farms behind the products they purchase.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FARMER DIRECTORY
+             ===================================================== -->
+
+        <section
+            class="farmers-directory section-padding"
+            id="farmers"
+        >
+
+            <div class="container">
+
+
+                <!-- =========================
+                     SECTION HEADING
+                     ========================= -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Farmer Directory
+                        </span>
+
+                        <h2>
+                            Meet Our Farmers
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Browse farmers participating in the FarmHub
+                        marketplace.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SEARCH AND FILTER AREA
+                     ================================================= -->
+
+                <div class="directory-controls">
+
+
+                    <!-- SEARCH -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="farmerSearch"
+                            placeholder="Search farmers..."
+                            aria-label="Search farmers"
+                        >
+
+                    </div>
+
+
+
+                    <!-- LOCATION FILTER -->
+
+                    <div class="filter-control">
+
+                        <label
+                            for="farmerLocation"
+                            class="sr-only"
+                        >
+                            Filter by location
+                        </label>
+
+                        <select id="farmerLocation">
+
+                            <option value="all">
+                                All Locations
+                            </option>
+
+                            <option value="nairobi">
+                                Nairobi
+                            </option>
+
+                            <option value="nakuru">
+                                Nakuru
+                            </option>
+
+                            <option value="kiambu">
+                                Kiambu
+                            </option>
+
+                            <option value="uasin-gishu">
+                                Uasin Gishu
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- FARM TYPE FILTER -->
+
+                    <div class="filter-control">
+
+                        <label
+                            for="farmType"
+                            class="sr-only"
+                        >
+                            Filter by farm type
+                        </label>
+
+                        <select id="farmType">
+
+                            <option value="all">
+                                All Farm Types
+                            </option>
+
+                            <option value="dairy">
+                                Dairy
+                            </option>
+
+                            <option value="livestock">
+                                Livestock
+                            </option>
+
+                            <option value="poultry">
+                                Poultry
+                            </option>
+
+                            <option value="mixed">
+                                Mixed Farming
+                            </option>
+
+                            <option value="horticulture">
+                                Horticulture
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FARMER CARDS
+                     ================================================= -->
+
+                <div
+                    class="directory-grid farmers-grid"
+                    id="farmersGrid"
+                >
+
+
+                    <!-- =================================================
+                         FARMER 1
+                         IMAGE:
+                         assets/images/farmers/farmer-1.jpg
+                         ================================================= -->
+
+                    <article
+                        class="profile-card farmer-card"
+                        data-name="James Mwangi"
+                        data-location="nairobi"
+                        data-type="dairy"
+                    >
+
+                        <div class="profile-card-image">
+
+                            <img
+                                src="../assets/images/farmers/farmer-1.jpg"
+                                alt="James Mwangi on his farm"
+                                loading="lazy"
+                            >
+
+                            <span class="verified-badge">
+                                <i class="fa-solid fa-check"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-card-content">
+
+                            <h3>
+                                James Mwangi
+                            </h3>
+
+                            <p class="profile-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Nairobi
+                            </p>
+
+                            <p>
+                                Dairy farmer supplying fresh milk and
+                                other farm products.
+                            </p>
+
+                            <div class="profile-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-cow"></i>
+                                    Dairy Farm
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-box"></i>
+                                    18 Products
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="farmer-profile.html"
+                                class="profile-link"
+                            >
+                                View Farm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         FARMER 2
+                         IMAGE:
+                         assets/images/farmers/farmer-2.jpg
+                         ================================================= -->
+
+                    <article
+                        class="profile-card farmer-card"
+                        data-name="Mary Wanjiru"
+                        data-location="kiambu"
+                        data-type="mixed"
+                    >
+
+                        <div class="profile-card-image">
+
+                            <img
+                                src="../assets/images/farmers/farmer-2.jpg"
+                                alt="Mary Wanjiru working on her farm"
+                                loading="lazy"
+                            >
+
+                            <span class="verified-badge">
+                                <i class="fa-solid fa-check"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-card-content">
+
+                            <h3>
+                                Mary Wanjiru
+                            </h3>
+
+                            <p class="profile-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Kiambu
+                            </p>
+
+                            <p>
+                                Mixed farmer producing fresh vegetables,
+                                eggs and other farm products.
+                            </p>
+
+                            <div class="profile-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-leaf"></i>
+                                    Mixed Farm
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-box"></i>
+                                    14 Products
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="farmer-profile.html"
+                                class="profile-link"
+                            >
+                                View Farm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         FARMER 3
+                         IMAGE:
+                         assets/images/farmers/farmer-3.jpg
+                         ================================================= -->
+
+                    <article
+                        class="profile-card farmer-card"
+                        data-name="David Kiptoo"
+                        data-location="uasin-gishu"
+                        data-type="livestock"
+                    >
+
+                        <div class="profile-card-image">
+
+                            <img
+                                src="../assets/images/farmers/farmer-3.jpg"
+                                alt="David Kiptoo on his livestock farm"
+                                loading="lazy"
+                            >
+
+                            <span class="verified-badge">
+                                <i class="fa-solid fa-check"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-card-content">
+
+                            <h3>
+                                David Kiptoo
+                            </h3>
+
+                            <p class="profile-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Uasin Gishu
+                            </p>
+
+                            <p>
+                                Livestock farmer focused on responsible
+                                animal care and quality production.
+                            </p>
+
+                            <div class="profile-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-cow"></i>
+                                    Livestock
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-box"></i>
+                                    11 Products
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="farmer-profile.html"
+                                class="profile-link"
+                            >
+                                View Farm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         FARMER 4
+                         IMAGE:
+                         assets/images/farmers/farmer-4.jpg
+                         ================================================= -->
+
+                    <article
+                        class="profile-card farmer-card"
+                        data-name="Grace Akinyi"
+                        data-location="nakuru"
+                        data-type="poultry"
+                    >
+
+                        <div class="profile-card-image">
+
+                            <img
+                                src="../assets/images/farmers/farmer-4.jpg"
+                                alt="Grace Akinyi with poultry"
+                                loading="lazy"
+                            >
+
+                            <span class="verified-badge">
+                                <i class="fa-solid fa-check"></i>
+                                Verified
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-card-content">
+
+                            <h3>
+                                Grace Akinyi
+                            </h3>
+
+                            <p class="profile-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Nakuru
+                            </p>
+
+                            <p>
+                                Poultry farmer supplying eggs and
+                                quality poultry products.
+                            </p>
+
+                            <div class="profile-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-egg"></i>
+                                    Poultry
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-box"></i>
+                                    9 Products
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="farmer-profile.html"
+                                class="profile-link"
+                            >
+                                View Farm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     NO RESULTS MESSAGE
+                     ================================================= -->
+
+                <div
+                    class="no-results"
+                    id="farmerNoResults"
+                    hidden
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <h3>
+                        No farmers found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW FARMERS WORK WITH FARMHUB
+             ===================================================== -->
+
+        <section class="process-section section-padding">
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="eyebrow">
+                        How It Works
+                    </span>
+
+                    <h2>
+                        From Farm to Marketplace
+                    </h2>
+
+                    <p>
+                        FarmHub provides a structured platform for
+                        farmers to showcase and sell their products.
+                    </p>
+
+                </div>
+
+
+
+                <div class="process-grid">
+
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <h3>
+                            Farmer Registration
+                        </h3>
+
+                        <p>
+                            Farmers create an account and provide the
+                            information required for verification.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+
+                        <h3>
+                            Verification
+                        </h3>
+
+                        <p>
+                            The platform can review farmer and farm
+                            information before approval.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+
+                        <h3>
+                            List Products
+                        </h3>
+
+                        <p>
+                            Approved farmers can add products,
+                            availability and pricing.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+
+                        <h3>
+                            Receive Orders
+                        </h3>
+
+                        <p>
+                            Customers discover products and place
+                            orders through the marketplace.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FARMER CTA
+             ===================================================== -->
+
+        <section class="page-cta section-padding">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Join FarmHub
+                        </span>
+
+                        <h2>
+                            Ready to Bring Your Farm Online?
+                        </h2>
+
+                        <p>
+                            Create a farmer account and become part
+                            of the FarmHub marketplace.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="role-selection.html"
+                        class="btn btn-primary"
+                    >
+                        Become a Farmer
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="logo"
+                >
+                    Farm<span>Hub</span>
+                </a>
+
+                <p>
+                    Connecting customers with trusted farmers,
+                    quality farm products and veterinary services.
+                </p>
+
+            </div>
+
+
+            <!-- MARKETPLACE -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Marketplace
+                </h3>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="farmers.html">
+                    Farmers
+                </a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+                <a href="veterinarians.html">
+                    Veterinarians
+                </a>
+
+                <a href="training.html">
+                    Animal Training
+                </a>
+
+                <a href="quality.html">
+                    Quality
+                </a>
+
+            </div>
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="about.html">
+                    About FarmHub
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; 2026 FarmHub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script src="../js/public-pages.js"></script>
+
+</body>
+
+</html>
