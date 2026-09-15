@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product Details | FarmHub</title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/product-details.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+
+            <nav
+                class="main-navigation"
+                id="mainNavigation"
+            >
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="products.html"
+                    class="nav-link active"
+                >
+                    Products
+                </a>
+
+                <a
+                    href="farmers.html"
+                    class="nav-link"
+                >
+                    Farmers
+                </a>
+
+                <a
+                    href="veterinarians.html"
+                    class="nav-link"
+                >
+                    Veterinarians
+                </a>
+
+                <a
+                    href="training.html"
+                    class="nav-link"
+                >
+                    Animal Training
+                </a>
+
+                <a
+                    href="about.html"
+                    class="nav-link"
+                >
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cart.html"
+                    class="cart-header-link"
+                >
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- PRODUCT DETAILS -->
+
+        <section class="product-details-section">
+
+            <div class="container">
+
+                <a
+                    href="products.html"
+                    class="back-products"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Products
+                </a>
+
+
+                <div
+                    class="product-details"
+                    id="productDetails"
+                >
+
+                    <!-- JavaScript loads product -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RELATED PRODUCTS -->
+
+        <section class="related-products-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        You May Also Like
+                    </span>
+
+                    <h2>
+                        Related Products
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="related-products-grid"
+                    id="relatedProducts"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 FarmHub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/products-data.js"></script>
+
+    <script src="../js/product-details.js"></script>
+
+</body>
+
+</html>

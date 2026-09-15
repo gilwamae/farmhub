@@ -1,0 +1,517 @@
+/* =========================================================
+   FARMHUB - CHECKOUT
+   ========================================================= */
+
+.checkout-back {
+    margin-left: auto;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.checkout-back:hover {
+    color: var(--primary-green);
+}
+
+
+.checkout-section {
+    padding: 65px 0 100px;
+
+    background: var(--background);
+
+    min-height: 80vh;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.checkout-heading {
+    margin-bottom: 40px;
+}
+
+.checkout-heading h1 {
+    margin-top: 10px;
+
+    color: var(--primary-green);
+
+    font-family: var(--font-primary);
+
+    font-size: clamp(32px, 4vw, 46px);
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.checkout-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 350px;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+.checkout-main {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CHECKOUT CARD
+   ========================================================= */
+
+.checkout-card,
+.checkout-summary {
+    padding: 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+}
+
+.checkout-card-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.checkout-card-heading > span {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-green);
+
+    color: var(--primary-green);
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.checkout-card-heading h2 {
+    margin-bottom: 4px;
+
+    color: var(--text-dark);
+
+    font-size: 19px;
+}
+
+.checkout-card-heading p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.form-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    margin-bottom: 7px;
+
+    color: var(--text-dark);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 7px;
+
+    background: var(--white);
+
+    color: var(--text-dark);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--primary-green);
+}
+
+.form-field.invalid input,
+.form-field.invalid select,
+.form-field.invalid textarea {
+    border-color: #d9534f;
+}
+
+.field-error {
+    min-height: 16px;
+
+    margin-top: 5px;
+
+    color: #d9534f;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   PAYMENT OPTIONS
+   ========================================================= */
+
+.payment-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.payment-option {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 17px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.payment-option:has(input:checked) {
+    border-color: var(--primary-green);
+
+    background: var(--light-green);
+}
+
+.payment-option input {
+    margin-top: 4px;
+
+    accent-color: var(--primary-green);
+}
+
+.payment-option span {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.payment-option i {
+    color: var(--primary-green);
+
+    font-size: 18px;
+}
+
+.payment-option strong {
+    color: var(--text-dark);
+
+    font-size: 13px;
+}
+
+.payment-option small {
+    color: var(--text-light);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TERMS
+   ========================================================= */
+
+.terms-field {
+    padding: 5px 0;
+}
+
+.terms-field label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.terms-field input {
+    margin-top: 3px;
+
+    accent-color: var(--primary-green);
+}
+
+
+/* =========================================================
+   PLACE ORDER
+   ========================================================= */
+
+.place-order-button {
+    width: 100%;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ORDER SUMMARY
+   ========================================================= */
+
+.checkout-summary {
+    position: sticky;
+
+    top: 100px;
+}
+
+.checkout-summary h2 {
+    margin-bottom: 22px;
+
+    color: var(--text-dark);
+
+    font-size: 19px;
+}
+
+.checkout-items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.checkout-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.checkout-item img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+.checkout-item-info {
+    flex: 1;
+}
+
+.checkout-item-info strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--text-dark);
+
+    font-size: 12px;
+}
+
+.checkout-item-info span {
+    color: var(--text-light);
+
+    font-size: 10px;
+}
+
+.checkout-item-price {
+    color: var(--text-dark);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.checkout-summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 13px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+.checkout-summary-row strong {
+    color: var(--text-dark);
+}
+
+.checkout-summary-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+
+    margin-top: 18px;
+
+    border-top: 1px solid var(--border-color);
+
+    color: var(--text-dark);
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.checkout-summary-total strong {
+    color: var(--primary-green);
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.order-success {
+    max-width: 600px;
+
+    margin: 50px auto;
+
+    padding: 60px 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: var(--light-green);
+
+    color: var(--primary-green);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.order-success h2 {
+    margin-bottom: 10px;
+
+    color: var(--primary-green);
+}
+
+.order-success p {
+    margin-bottom: 25px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.full-width {
+        grid-column: auto;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Shopping Cart | FarmHub</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cart.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+
+            <nav
+                class="main-navigation"
+                id="mainNavigation"
+            >
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="products.html"
+                    class="nav-link active"
+                >
+                    Products
+                </a>
+
+                <a
+                    href="farmers.html"
+                    class="nav-link"
+                >
+                    Farmers
+                </a>
+
+                <a
+                    href="veterinarians.html"
+                    class="nav-link"
+                >
+                    Veterinarians
+                </a>
+
+                <a
+                    href="training.html"
+                    class="nav-link"
+                >
+                    Animal Training
+                </a>
+
+                <a
+                    href="about.html"
+                    class="nav-link"
+                >
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="cart-section">
+
+            <div class="container">
+
+                <div class="cart-heading">
+
+                    <span class="section-label">
+                        Your Shopping Cart
+                    </span>
+
+                    <h1>
+                        Review Your Order
+                    </h1>
+
+                </div>
+
+
+                <div
+                    class="cart-layout"
+                    id="cartLayout"
+                >
+
+
+                    <!-- CART ITEMS -->
+
+                    <div
+                        class="cart-items"
+                        id="cartItems"
+                    >
+                    </div>
+
+
+                    <!-- CART SUMMARY -->
+
+                    <aside class="cart-summary">
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="cartSubtotal">
+                                KSh 0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong id="cartDelivery">
+                                KSh 0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="cartTotal">
+                                KSh 0
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="checkout.html"
+                            class="btn btn-primary checkout-button"
+                            id="checkoutButton"
+                        >
+                            Proceed to Checkout
+                        </a>
+
+
+                        <a
+                            href="products.html"
+                            class="continue-shopping"
+                        >
+                            Continue Shopping
+                        </a>
+
+                    </aside>
+
+                </div>
+
+
+                <!-- EMPTY CART -->
+
+                <div
+                    class="empty-cart"
+                    id="emptyCart"
+                    hidden
+                >
+
+                    <div class="empty-cart-icon">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+
+                    <h2>
+                        Your Cart Is Empty
+                    </h2>
+
+                    <p>
+                        Explore FarmHub and find fresh products
+                        from trusted farmers.
+                    </p>
+
+                    <a
+                        href="products.html"
+                        class="btn btn-primary"
+                    >
+                        Start Shopping
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 FarmHub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/products-data.js"></script>
+
+    <script src="../js/cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Shop fresh farm products from trusted FarmHub farmers."
+    >
+
+    <title>Farm Products Marketplace | FarmHub</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- GLOBAL CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+
+    <!-- MARKETPLACE CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/products.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+
+            <nav
+                class="main-navigation"
+                id="mainNavigation"
+            >
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="products.html"
+                    class="nav-link active"
+                >
+                    Products
+                </a>
+
+                <a
+                    href="farmers.html"
+                    class="nav-link"
+                >
+                    Farmers
+                </a>
+
+                <a
+                    href="veterinarians.html"
+                    class="nav-link"
+                >
+                    Veterinarians
+                </a>
+
+                <a
+                    href="training.html"
+                    class="nav-link"
+                >
+                    Animal Training
+                </a>
+
+                <a
+                    href="about.html"
+                    class="nav-link"
+                >
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cart.html"
+                    class="cart-header-link"
+                >
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+                </a>
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="register.html"
+                    class="btn btn-primary"
+                >
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MARKETPLACE
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="marketplace-hero">
+
+            <div class="container">
+
+                <span class="section-label">
+                    FarmHub Marketplace
+                </span>
+
+                <h1>
+                    Fresh Products From
+                    <span>Trusted Farms.</span>
+                </h1>
+
+                <p>
+                    Discover fresh farm products from farmers on
+                    FarmHub. Search, compare and shop products
+                    that fit your needs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MARKETPLACE CONTENT
+             ================================================= -->
+
+        <section class="marketplace-section">
+
+            <div class="container marketplace-layout">
+
+
+                <!-- =========================================
+                     FILTER SIDEBAR
+                     ========================================= -->
+
+                <aside class="filter-sidebar">
+
+                    <div class="filter-header">
+
+                        <h2>
+                            Filter Products
+                        </h2>
+
+                        <button
+                            type="button"
+                            id="clearFilters"
+                            class="clear-filter"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="filter-group">
+
+                        <h3>
+                            Category
+                        </h3>
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="all"
+                                checked
+                            >
+
+                            <span>
+                                All Products
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="dairy"
+                            >
+
+                            <span>
+                                Milk & Dairy
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="meat"
+                            >
+
+                            <span>
+                                Meat & Poultry
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="eggs"
+                            >
+
+                            <span>
+                                Eggs
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="fruits"
+                            >
+
+                            <span>
+                                Fruits
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="vegetables"
+                            >
+
+                            <span>
+                                Vegetables
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="grains"
+                            >
+
+                            <span>
+                                Grains & Cereals
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="honey"
+                            >
+
+                            <span>
+                                Honey
+                            </span>
+
+                        </label>
+
+
+                        <label class="filter-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="cheese"
+                            >
+
+                            <span>
+                                Cheese
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- PRICE -->
+
+                    <div class="filter-group">
+
+                        <h3>
+                            Price Range
+                        </h3>
+
+                        <div class="price-inputs">
+
+                            <div>
+
+                                <label for="minPrice">
+                                    Min
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="minPrice"
+                                    placeholder="0"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="maxPrice">
+                                    Max
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="maxPrice"
+                                    placeholder="5000"
+                                    min="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="filter-group">
+
+                        <h3>
+                            Farm Location
+                        </h3>
+
+                        <select id="locationFilter">
+
+                            <option value="all">
+                                All Locations
+                            </option>
+
+                            <option value="Nairobi">
+                                Nairobi
+                            </option>
+
+                            <option value="Kiambu">
+                                Kiambu
+                            </option>
+
+                            <option value="Nakuru">
+                                Nakuru
+                            </option>
+
+                            <option value="Limuru">
+                                Limuru
+                            </option>
+
+                            <option value="Murang'a">
+                                Murang'a
+                            </option>
+
+                            <option value="Machakos">
+                                Machakos
+                            </option>
+
+                            <option value="Makueni">
+                                Makueni
+                            </option>
+
+                            <option value="Baringo">
+                                Baringo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- RATING -->
+
+                    <div class="filter-group">
+
+                        <h3>
+                            Minimum Rating
+                        </h3>
+
+                        <select id="ratingFilter">
+
+                            <option value="0">
+                                Any Rating
+                            </option>
+
+                            <option value="4">
+                                4+ Stars
+                            </option>
+
+                            <option value="4.5">
+                                4.5+ Stars
+                            </option>
+
+                            <option value="4.8">
+                                4.8+ Stars
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </aside>
+
+
+
+                <!-- =========================================
+                     PRODUCTS AREA
+                     ========================================= -->
+
+                <div class="products-area">
+
+
+                    <!-- TOOLBAR -->
+
+                    <div class="products-toolbar">
+
+
+                        <div class="search-box">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="search"
+                                id="productSearch"
+                                placeholder="Search products, farmers..."
+                                aria-label="Search products"
+                            >
+
+                        </div>
+
+
+                        <div class="toolbar-right">
+
+                            <span id="productCount">
+                                0 products
+                            </span>
+
+
+                            <select
+                                id="sortProducts"
+                                aria-label="Sort products"
+                            >
+
+                                <option value="default">
+                                    Sort: Recommended
+                                </option>
+
+                                <option value="price-low">
+                                    Price: Low to High
+                                </option>
+
+                                <option value="price-high">
+                                    Price: High to Low
+                                </option>
+
+                                <option value="rating">
+                                    Highest Rated
+                                </option>
+
+                                <option value="name">
+                                    Name: A-Z
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCTS -->
+
+                    <div
+                        class="products-grid"
+                        id="productsGrid"
+                    >
+                    </div>
+
+
+                    <!-- NO RESULTS -->
+
+                    <div
+                        class="no-products"
+                        id="noProducts"
+                        hidden
+                    >
+
+                        <div class="no-products-icon">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                        </div>
+
+                        <h2>
+                            No products found
+                        </h2>
+
+                        <p>
+                            Try changing your search or filter options.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="resetProducts"
+                        >
+                            Reset Filters
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 FarmHub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/products-data.js"></script>
+
+    <script src="../js/products.js"></script>
+
+</body>
+
+</html>

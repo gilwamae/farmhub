@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout | FarmHub</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/checkout.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                Farm<span>Hub</span>
+            </a>
+
+            <a
+                href="cart.html"
+                class="checkout-back"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Cart
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="checkout-section">
+
+            <div class="container">
+
+
+                <div class="checkout-heading">
+
+                    <span class="section-label">
+                        FarmHub Checkout
+                    </span>
+
+                    <h1>
+                        Complete Your Order
+                    </h1>
+
+                </div>
+
+
+                <form
+                    id="checkoutForm"
+                    novalidate
+                >
+
+
+                    <div class="checkout-layout">
+
+
+                        <!-- =================================
+                             CUSTOMER INFORMATION
+                             ================================= -->
+
+                        <div class="checkout-main">
+
+
+                            <div class="checkout-card">
+
+                                <div class="checkout-card-heading">
+
+                                    <span>
+                                        01
+                                    </span>
+
+                                    <div>
+
+                                        <h2>
+                                            Customer Information
+                                        </h2>
+
+                                        <p>
+                                            Tell us where to deliver your order.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-grid">
+
+
+                                    <div class="form-field">
+
+                                        <label for="fullName">
+                                            Full Name *
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="fullName"
+                                            name="fullName"
+                                            placeholder="Enter your full name"
+                                            required
+                                        >
+
+                                        <small
+                                            class="field-error"
+                                            id="fullNameError"
+                                        ></small>
+
+                                    </div>
+
+
+                                    <div class="form-field">
+
+                                        <label for="phone">
+                                            Phone Number *
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            placeholder="e.g. 0712345678"
+                                            required
+                                        >
+
+                                        <small
+                                            class="field-error"
+                                            id="phoneError"
+                                        ></small>
+
+                                    </div>
+
+
+                                    <div class="form-field">
+
+                                        <label for="email">
+                                            Email Address *
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            placeholder="you@example.com"
+                                            required
+                                        >
+
+                                        <small
+                                            class="field-error"
+                                            id="emailError"
+                                        ></small>
+
+                                    </div>
+
+
+                                    <div class="form-field">
+
+                                        <label for="county">
+                                            County *
+                                        </label>
+
+                                        <select
+                                            id="county"
+                                            name="county"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Select county
+                                            </option>
+
+                                            <option>
+                                                Nairobi
+                                            </option>
+
+                                            <option>
+                                                Kiambu
+                                            </option>
+
+                                            <option>
+                                                Nakuru
+                                            </option>
+
+                                            <option>
+                                                Machakos
+                                            </option>
+
+                                            <option>
+                                                Makueni
+                                            </option>
+
+                                            <option>
+                                                Murang'a
+                                            </option>
+
+                                            <option>
+                                                Baringo
+                                            </option>
+
+                                            <option>
+                                                Other
+                                            </option>
+
+                                        </select>
+
+                                        <small
+                                            class="field-error"
+                                            id="countyError"
+                                        ></small>
+
+                                    </div>
+
+
+                                    <div class="form-field full-width">
+
+                                        <label for="address">
+                                            Delivery Address *
+                                        </label>
+
+                                        <textarea
+                                            id="address"
+                                            name="address"
+                                            rows="4"
+                                            placeholder="Enter your delivery address"
+                                            required
+                                        ></textarea>
+
+                                        <small
+                                            class="field-error"
+                                            id="addressError"
+                                        ></small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PAYMENT -->
+
+                            <div class="checkout-card">
+
+                                <div class="checkout-card-heading">
+
+                                    <span>
+                                        02
+                                    </span>
+
+                                    <div>
+
+                                        <h2>
+                                            Payment Method
+                                        </h2>
+
+                                        <p>
+                                            Select how you would like to pay.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="payment-options">
+
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="paymentMethod"
+                                            value="mpesa"
+                                            checked
+                                        >
+
+                                        <span>
+
+                                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                            <strong>
+                                                M-Pesa
+                                            </strong>
+
+                                            <small>
+                                                Pay using M-Pesa
+                                            </small>
+
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="paymentMethod"
+                                            value="cash"
+                                        >
+
+                                        <span>
+
+                                            <i class="fa-solid fa-money-bill"></i>
+
+                                            <strong>
+                                                Cash on Delivery
+                                            </strong>
+
+                                            <small>
+                                                Pay when your order arrives
+                                            </small>
+
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- TERMS -->
+
+                            <div class="terms-field">
+
+                                <label>
+
+                                    <input
+                                        type="checkbox"
+                                        id="terms"
+                                        required
+                                    >
+
+                                    <span>
+                                        I confirm that the information
+                                        provided is correct and I agree
+                                        to FarmHub's terms of service.
+                                    </span>
+
+                                </label>
+
+                                <small
+                                    class="field-error"
+                                    id="termsError"
+                                ></small>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary place-order-button"
+                            >
+
+                                Place Order
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             ORDER SUMMARY
+                             ================================= -->
+
+                        <aside class="checkout-summary">
+
+                            <h2>
+                                Your Order
+                            </h2>
+
+
+                            <div
+                                id="checkoutItems"
+                                class="checkout-items"
+                            >
+                            </div>
+
+
+                            <div class="checkout-summary-row">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="checkoutSubtotal">
+                                    KSh 0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="checkout-summary-row">
+
+                                <span>
+                                    Delivery
+                                </span>
+
+                                <strong>
+                                    KSh 200
+                                </strong>
+
+                            </div>
+
+
+                            <div class="checkout-summary-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong id="checkoutTotal">
+                                    KSh 0
+                                </strong>
+
+                            </div>
+
+                        </aside>
+
+                    </div>
+
+                </form>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div
+                    class="order-success"
+                    id="orderSuccess"
+                    hidden
+                >
+
+                    <div class="success-icon">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </div>
+
+                    <h2>
+                        Order Received
+                    </h2>
+
+                    <p>
+                        Thank you for shopping with FarmHub.
+                        Your order has been received successfully.
+                    </p>
+
+                    <a
+                        href="products.html"
+                        class="btn btn-primary"
+                    >
+                        Continue Shopping
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="../js/products-data.js"></script>
+
+    <script src="../js/checkout.js"></script>
+
+</body>
+
+</html>
