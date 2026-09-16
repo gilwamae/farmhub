@@ -20,56 +20,134 @@
    ========================================================= */
 
 
+//* =========================================================
+//    1. SELECT NAVIGATION ELEMENTS
+//    ========================================================= */
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const mainNavigation =
+    document.getElementById("mainNavigation");
+
+
 /* =========================================================
-   1. MOBILE NAVIGATION
+   2. MOBILE NAVIGATION
    ========================================================= */
-
-const menuToggle = document.getElementById("menuToggle");
-const mainNavigation = document.getElementById("mainNavigation");
-
 
 if (menuToggle && mainNavigation) {
 
+
+    /* -----------------------------------------------------
+       OPEN / CLOSE MOBILE MENU
+       ----------------------------------------------------- */
+
     menuToggle.addEventListener("click", function () {
 
-        const isOpen =
-            mainNavigation.classList.toggle("mobile-open");
 
-        menuToggle.classList.toggle("active", isOpen);
+        /* Toggle the active class */
+
+        const isOpen =
+            mainNavigation.classList.toggle("active");
+
+
+        /* -------------------------------------------------
+           Update accessibility state
+           ------------------------------------------------- */
 
         menuToggle.setAttribute(
             "aria-expanded",
-            isOpen ? "true" : "false"
+            isOpen
+        );
+
+
+        /* -------------------------------------------------
+           Update button description
+           ------------------------------------------------- */
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
         );
 
     });
 
 
-    /*
-       Close the menu after clicking a navigation link.
-    */
+    /* =====================================================
+       3. CLOSE MENU AFTER CLICKING A LINK
+       ===================================================== */
 
     const navigationLinks =
-        mainNavigation.querySelectorAll("a");
+        mainNavigation.querySelectorAll(".nav-link");
+
 
     navigationLinks.forEach(function (link) {
 
         link.addEventListener("click", function () {
 
-            mainNavigation.classList.remove("mobile-open");
 
-            menuToggle.classList.remove("active");
+            /* Close navigation */
+
+            mainNavigation.classList.remove("active");
+
+
+            /* Reset accessibility state */
 
             menuToggle.setAttribute(
                 "aria-expanded",
                 "false"
             );
 
+
+            /* Reset button label */
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
         });
 
     });
 
+
+    /* =====================================================
+       4. CLOSE MENU WITH ESCAPE KEY
+       ===================================================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+
+            /* Close navigation */
+
+            mainNavigation.classList.remove("active");
+
+
+            /* Reset accessibility state */
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            /* Reset button label */
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
+
 }
+
 
 
 /* =========================================================
