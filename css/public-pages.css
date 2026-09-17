@@ -1593,12 +1593,18 @@
 
 .site-footer {
 
+    width: 100%;
+
     background: #102817;
 
     color: rgba(255, 255, 255, 0.8);
 
 }
 
+
+/* ---------------------------------------------------------
+   FOOTER MAIN GRID
+   --------------------------------------------------------- */
 
 .footer-grid {
 
@@ -1614,6 +1620,10 @@
 
 }
 
+
+/* ---------------------------------------------------------
+   FOOTER BRAND
+   --------------------------------------------------------- */
 
 .footer-brand .logo {
 
@@ -1653,6 +1663,10 @@
 
 }
 
+
+/* ---------------------------------------------------------
+   FOOTER COLUMNS
+   --------------------------------------------------------- */
 
 .footer-column {
 
@@ -1696,7 +1710,13 @@
 }
 
 
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
 .footer-bottom {
+
+    width: 100%;
 
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 
@@ -1704,6 +1724,16 @@
 
 
 .footer-bottom .container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-width: 0;
 
     padding: 20px 0;
 
@@ -1717,6 +1747,8 @@
     color: rgba(255, 255, 255, 0.5);
 
     font-size: 12px;
+
+    line-height: 1.6;
 
 }
 
@@ -1758,6 +1790,19 @@
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+
+        grid-template-columns:
+            1.3fr
+            repeat(3, 1fr);
+
+        gap: 30px;
 
     }
 
@@ -1848,10 +1893,25 @@
     }
 
 
+    /* -----------------------------------------------------
+       FOOTER MOBILE
+       ----------------------------------------------------- */
+
     .footer-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        gap: 30px;
+
+        padding: 55px 0;
+
+    }
+
+
+    .footer-bottom .container {
+
+        padding: 20px 0;
 
     }
 
@@ -1947,11 +2007,42 @@
     }
 
 
+    /* -----------------------------------------------------
+       SMALL MOBILE FOOTER
+       ----------------------------------------------------- */
+
     .footer-grid {
 
         grid-template-columns: 1fr;
 
         gap: 30px;
+
+        padding: 45px 0;
+
+    }
+
+
+    .footer-brand p {
+
+        max-width: 100%;
+
+    }
+
+
+    .footer-bottom .container {
+
+        display: block;
+
+        padding: 18px 0;
+
+    }
+
+
+    .footer-bottom p {
+
+        max-width: 100%;
+
+        font-size: 11px;
 
     }
 
@@ -1959,6 +2050,36 @@
     .cta-content {
 
         padding: 28px 22px;
+
+    }
+
+}
+/* =========================================================
+   FINAL MOBILE EDGE SPACING
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .site-footer .container,
+    .site-footer .footer-bottom .container {
+
+        width: 100%;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .site-footer .container,
+    .site-footer .footer-bottom .container {
+
+        padding-left: 18px;
+        padding-right: 18px;
 
     }
 

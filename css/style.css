@@ -1363,3 +1363,43 @@ select {
     }
 
 }
+/* =========================================================
+   MOBILE GET STARTED NAVIGATION LINK
+   ========================================================= */
+
+/* Hidden on desktop */
+.mobile-get-started {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* Show Get Started inside hamburger menu */
+    .mobile-get-started {
+        display: block;
+
+        margin-top: 8px;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        color: var(--primary-green);
+
+        font-size: 14px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        border-top: 1px solid var(--border-color);
+    }
+
+    .mobile-get-started:hover {
+        color: var(--dark-green);
+    }
+
+}
